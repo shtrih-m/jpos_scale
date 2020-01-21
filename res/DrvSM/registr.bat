@@ -1,0 +1,1 @@
+tregsvr DrvSM.dll

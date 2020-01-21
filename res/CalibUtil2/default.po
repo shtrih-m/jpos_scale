@@ -1,0 +1,1269 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: CAlibUtil\n"
+"POT-Creation-Date: 2014-04-15 19:50\n"
+"PO-Revision-Date: 2014-04-16 11:50+0300\n"
+"Last-Translator: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.4\n"
+"Language-Team: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: ru\n"
+
+#. Programmer's name for it: dtlServerPage
+#: AddIn_TLB.pas:1152
+msgid "Servers"
+msgstr "Servers"
+
+#. Programmer's name for it: dtlOcxPage
+#: AddIn_TLB.pas:1154
+msgid "ActiveX"
+msgstr "ActiveX"
+
+#: FindDevice.pas:33 FindDevice.pas:64
+msgid "идет поиск ..."
+msgstr "идет поиск ..."
+
+#: FindDevice.pas:34
+msgid "поиск прерван"
+msgstr "поиск прерван"
+
+#: FindDevice.pas:62
+msgid "устройство не найдено"
+msgstr "устройство не найдено"
+
+#: fmuMain.pas:78
+msgid "Invalid page index"
+msgstr "Invalid page index"
+
+#. fmSearch..Panel1..Button1..Caption
+#: fmuMain.pas:102 fmuMain.pas:305 fmuSearch.xfm:49
+msgid "Прервать"
+msgstr "Прервать"
+
+#. fmMain..btnClose..Caption
+#: fmuMain.pas:104 fmuMain.xfm:30
+msgid "Выйти"
+msgstr "Выйти"
+
+#: fmuMain.pas:114
+msgid ""
+"Невозможно перейти в режим градуировки.\n"
+"Возможно, надо установить градуировочный переключатель\n"
+"в положение ВКЛ (ON)."
+msgstr ""
+"Невозможно перейти в режим градуировки.\n"
+"Возможно, надо установить градуировочный переключатель\n"
+"в положение ВКЛ (ON)."
+
+#. переходим в режим градуировки
+#: fmuMain.pas:152 fmuMain.pas:159 fmuMain.pas:299 fmuPage2.pas:63
+msgid "Ошибка"
+msgstr "Ошибка"
+
+#: fmuMain.pas:235
+msgid "Вы уверены, что хотите прервать процесс градуировки?"
+msgstr "Вы уверены, что хотите прервать процесс градуировки?"
+
+#: fmuMain.pas:236
+msgid "Подтверждение"
+msgstr "Подтверждение"
+
+#: fmuPage2.pas:35
+msgid "Канал №%d"
+msgstr "Канал №%d"
+
+#: fmuPage2.pas:50
+msgid "<нет>"
+msgstr "<нет>"
+
+#: fmuPage2.pas:52
+msgid "<есть>"
+msgstr "<есть>"
+
+#: fmuPage2.pas:67
+msgid "Характеристики весового канала: %d"
+msgstr "Характеристики весового канала: %d"
+
+#: fmuPage2.pas:69
+msgid "<тензоканал>"
+msgstr "<тензоканал>"
+
+#: fmuPage2.pas:70
+msgid "<неизвестный>"
+msgstr "<неизвестный>"
+
+#: fmuPage2.pas:72
+msgid "Тип канала         : %s"
+msgstr "Тип канала         : %s"
+
+#: fmuPage2.pas:73
+msgid "Выборка массы тары : %s"
+msgstr "Выборка массы тары : %s"
+
+#: fmuPage2.pas:74
+msgid "Максимальный вес   : %8.3f кг"
+msgstr "Максимальный вес   : %8.3f кг"
+
+#: fmuPage2.pas:75
+msgid "Минимальный вес    : %8.3f кг"
+msgstr "Минимальный вес    : %8.3f кг"
+
+#: fmuPage2.pas:76
+msgid "Максимальная тара  : %8.3f кг"
+msgstr "Максимальная тара  : %8.3f кг"
+
+#: fmuPage2.pas:77 fmuPage2.pas:80 fmuPage2.pas:83
+msgid "Диапазон №%d        : %8.3f-%8.3f кг"
+msgstr "Диапазон №%d        : %8.3f-%8.3f кг"
+
+#: fmuPage2.pas:86 fmuPage2.pas:89 fmuPage2.pas:92 fmuPage2.pas:95
+msgid "Дискретность на диапазоне №%d: %8.3f кг"
+msgstr "Дискретность на диапазоне №%d: %8.3f кг"
+
+#: fmuPage2.pas:97
+msgid "Количество градуировочных точек: %d"
+msgstr "Количество градуировочных точек: %d"
+
+#: fmuPage3.pas:35 fmuPage4.pas:40
+msgid "  Градуируется реперная точка №%d (вес %8.3f кг)."
+msgstr "  Градуируется реперная точка №%d (вес %8.3f кг)."
+
+#: fmuPage3.pas:37
+msgid "  Положите на платформу вес %8.3f кг."
+msgstr "  Положите на платформу вес %8.3f кг."
+
+#: fmuPage3.pas:40
+msgid " Убедитесь, что платформа пуста."
+msgstr " Убедитесь, что платформа пуста."
+
+#: fmuPage4.pas:70
+msgid "точка готова для измерения"
+msgstr "точка готова для измерения"
+
+#: fmuPage4.pas:71
+msgid "успокоения нет"
+msgstr "успокоения нет"
+
+#: fmuPage4.pas:72
+msgid "точка измеряется, успокоение есть"
+msgstr "точка измеряется, успокоение есть"
+
+#: fmuPage4.pas:73
+msgid "градуировка закончена успешно"
+msgstr "градуировка закончена успешно"
+
+#: fmuPage4.pas:74
+msgid "градуировка закончена с ошибкой, реперные точки не изменены"
+msgstr "градуировка закончена с ошибкой, реперные точки не изменены"
+
+#: fmuPage5.pas:27
+msgid "  Градуировка успешно завершена. Уберите груз с платформы."
+msgstr "  Градуировка успешно завершена. Уберите груз с платформы."
+
+#. fmPage5..Label1..Caption
+#: fmuPage5.pas:31 fmuPage5.xfm:28
+msgid "  Градуировка завершена с ошибкой. Реперные точки не изменены."
+msgstr "  Градуировка завершена с ошибкой. Реперные точки не изменены."
+
+#: fmuPage5.pas:40
+msgid ""
+"Возможные причины ошибки:\n"
+"1. Установленный груз не соответствовал требуемому.\n"
+"2. Неисправен АЦП."
+msgstr ""
+"Возможные причины ошибки:\n"
+"1. Установленный груз не соответствовал требуемому.\n"
+"2. Неисправен АЦП."
+
+#: ScaleDriver.pas:349 ScaleDriver.pas:546 ScaleDriver.pas:1440
+msgid "Ошибок нет"
+msgstr "Ошибок нет"
+
+#: ScaleDriver.pas:534
+msgid "Соединение не установлено"
+msgstr "Соединение не установлено"
+
+#: ScaleDriver.pas:535
+msgid "Неверный тип устройства"
+msgstr "Неверный тип устройства"
+
+#: ScaleDriver.pas:536
+msgid "Нет активного логического устройства"
+msgstr "Нет активного логического устройства"
+
+#: ScaleDriver.pas:537
+msgid "Команда не реализуется в данной версии"
+msgstr "Команда не реализуется в данной версии"
+
+#: ScaleDriver.pas:538
+msgid "Удаление логического устройства невозможно"
+msgstr "Удаление логического устройства невозможно"
+
+#: ScaleDriver.pas:539
+msgid "Неверный номер логического устройства"
+msgstr "Неверный номер логического устройства"
+
+#: ScaleDriver.pas:540
+msgid "Параметр вне диапазона"
+msgstr "Параметр вне диапазона"
+
+#: ScaleDriver.pas:541
+msgid "Неожиданный ответ"
+msgstr "Неожиданный ответ"
+
+#: ScaleDriver.pas:542 ScaleDriver.pas:545
+msgid "Нет связи"
+msgstr "Нет связи"
+
+#: ScaleDriver.pas:543
+msgid "Сом-порт недоступен"
+msgstr "Сом-порт недоступен"
+
+#: ScaleDriver.pas:544
+msgid "Сом-порт занят другим приложением"
+msgstr "Сом-порт занят другим приложением"
+
+#: ScaleDriver.pas:547
+msgid "Ошибка в значении тары"
+msgstr "Ошибка в значении тары"
+
+#: ScaleDriver.pas:548
+msgid "Неизвестная команда"
+msgstr "Неизвестная команда"
+
+#: ScaleDriver.pas:549
+msgid "Неверная длина данных команды"
+msgstr "Неверная длина данных команды"
+
+#: ScaleDriver.pas:550
+msgid "Неверный пароль"
+msgstr "Неверный пароль"
+
+#: ScaleDriver.pas:551
+msgid "Команда не реализуется в данном режиме"
+msgstr "Команда не реализуется в данном режиме"
+
+#: ScaleDriver.pas:552
+msgid "Неверное значение параметра"
+msgstr "Неверное значение параметра"
+
+#: ScaleDriver.pas:553
+msgid "Ошибка при попытке установки нуля"
+msgstr "Ошибка при попытке установки нуля"
+
+#: ScaleDriver.pas:554
+msgid "Ошибка при установке тары"
+msgstr "Ошибка при установке тары"
+
+#: ScaleDriver.pas:555
+msgid "Вес не фиксирован"
+msgstr "Вес не фиксирован"
+
+#: ScaleDriver.pas:556
+msgid "Сбой энергонезависимой памяти"
+msgstr "Сбой энергонезависимой памяти"
+
+#: ScaleDriver.pas:557
+msgid "Команда не реализуется интерфейсом"
+msgstr "Команда не реализуется интерфейсом"
+
+#: ScaleDriver.pas:558
+msgid "Исчерпан лимит попыток обращения с неверным паролем"
+msgstr "Исчерпан лимит попыток обращения с неверным паролем"
+
+#: ScaleDriver.pas:559
+msgid "Режим градуировки блокирован градуировочным переключателем"
+msgstr "Режим градуировки блокирован градуировочным переключателем"
+
+#: ScaleDriver.pas:560
+msgid "Клавиатура заблокирована"
+msgstr "Клавиатура заблокирована"
+
+#: ScaleDriver.pas:561
+msgid "Нельзя поменять тип текущего канала"
+msgstr "Нельзя поменять тип текущего канала"
+
+#: ScaleDriver.pas:562
+msgid "Нельзя выключить текущий канал"
+msgstr "Нельзя выключить текущий канал"
+
+#: ScaleDriver.pas:563
+msgid "С данным каналом вообще ничего нельзя сделать"
+msgstr "С данным каналом вообще ничего нельзя сделать"
+
+#: ScaleDriver.pas:564
+msgid "Неверный номер канала"
+msgstr "Неверный номер канала"
+
+#: SerialPortX.pas:113
+msgid "No hardware"
+msgstr "No hardware"
+
+#. fmAbout..Caption
+#: fmuAbout.xfm:11
+msgid "О программе"
+msgstr "О программе"
+
+#. fmAbout..Font.Name
+#. fmAbout..Label1..Font.Name
+#. fmAbout..Label2..Font.Name
+#. fmAbout..Label4..Font.Name
+#. fmAbout..Label6..Font.Name
+#. fmAbout..Label8..Font.Name
+#. fmConnect..Font.Name
+#. fmEditLD..Font.Name
+#. fmMain..Font.Name
+#. fmPage1..Font.Name
+#. fmPage1..Label1..Font.Name
+#. fmPage1..Label2..Font.Name
+#. fmPage1..Label5..Font.Name
+#. fmPage2..Font.Name
+#. fmPage2..Label1..Font.Name
+#. fmPage2..Label5..Font.Name
+#. fmPage2..Label3..Font.Name
+#. fmPage2_5..Font.Name
+#. fmPage2_5..Label1..Font.Name
+#. fmPage2_5..Label2..Font.Name
+#. fmPage2_5..Label4..Font.Name
+#. fmPage2_5..Label5..Font.Name
+#. fmPage3..Font.Name
+#. fmPage3..Label1..Font.Name
+#. fmPage3..Label2..Font.Name
+#. fmPage3..Label3..Font.Name
+#. fmPage3..Label4..Font.Name
+#. fmPage3..Label5..Font.Name
+#. fmPage3..Label8..Font.Name
+#. fmPage4..Font.Name
+#. fmPage4..Label1..Font.Name
+#. fmPage4..Label5..Font.Name
+#. fmPage4..Label3..Font.Name
+#. fmPage4..Label4..Font.Name
+#. fmPage4..Label6..Font.Name
+#. fmPage4..Label2..Font.Name
+#. fmPage4..Label7..Font.Name
+#. fmPage4..Label8..Font.Name
+#. fmPage5..Font.Name
+#. fmPage5..Label1..Font.Name
+#. fmPage5..Label6..Font.Name
+#. fmPassword..Font.Name
+#. fmPassword..Label1..Font.Name
+#. fmSearch..Font.Name
+#: fmuAbout.xfm:16 fmuAbout.xfm:42 fmuAbout.xfm:58 fmuAbout.xfm:80
+#: fmuAbout.xfm:103 fmuAbout.xfm:126 fmuConnect.xfm:14 fmuEditLD.xfm:13
+#: fmuMain.xfm:15 fmuPage1.xfm:13 fmuPage1.xfm:40 fmuPage1.xfm:59
+#: fmuPage1.xfm:90 fmuPage2.xfm:14 fmuPage2.xfm:34 fmuPage2.xfm:52
+#: fmuPage2.xfm:75 fmuPage2_5.xfm:14 fmuPage2_5.xfm:34 fmuPage2_5.xfm:49
+#: fmuPage2_5.xfm:66 fmuPage2_5.xfm:85 fmuPage3.xfm:13 fmuPage3.xfm:33
+#: fmuPage3.xfm:49 fmuPage3.xfm:65 fmuPage3.xfm:83 fmuPage3.xfm:101
+#: fmuPage3.xfm:117 fmuPage4.xfm:13 fmuPage4.xfm:34 fmuPage4.xfm:52
+#: fmuPage4.xfm:68 fmuPage4.xfm:87 fmuPage4.xfm:105 fmuPage4.xfm:120
+#: fmuPage4.xfm:136 fmuPage4.xfm:153 fmuPage5.xfm:12 fmuPage5.xfm:31
+#: fmuPage5.xfm:47 fmuPassword.xfm:14 fmuPassword.xfm:36 fmuSearch.xfm:15
+msgid "MS Sans Serif"
+msgstr "MS Sans Serif"
+
+#. fmAbout..Label1..Caption
+#. fmConnect..Caption
+#: fmuAbout.xfm:38 fmuConnect.xfm:10
+msgid "Драйвер весов"
+msgstr "Драйвер весов"
+
+#. fmAbout..Label2..Caption
+#: fmuAbout.xfm:54
+msgid "Разработка: НТЦ \"Штрих-М\""
+msgstr "Разработка: НТЦ \"Штрих-М\""
+
+#. fmAbout..Label3..Caption
+#: fmuAbout.xfm:68
+msgid "Наш Web-сайт: "
+msgstr "Наш Web-сайт: "
+
+#. fmAbout..Label4..Caption
+#: fmuAbout.xfm:76
+msgid "http://www.shtrih-m.ru"
+msgstr "http://www.shtrih-m.ru"
+
+#. fmAbout..Label5..Caption
+#: fmuAbout.xfm:91
+msgid "Информация: "
+msgstr "Информация: "
+
+#. fmAbout..Label6..Caption
+#: fmuAbout.xfm:99
+msgid "info@shtrih-m.ru"
+msgstr "info@shtrih-m.ru"
+
+#. fmAbout..Label7..Caption
+#: fmuAbout.xfm:114
+msgid "Тех. поддержка: "
+msgstr "Тех. поддержка: "
+
+#. fmAbout..Label8..Caption
+#: fmuAbout.xfm:122
+msgid "support@shtrih-m.ru"
+msgstr "support@shtrih-m.ru"
+
+#. fmAbout..Label9..Caption
+#: fmuAbout.xfm:137
+msgid "Label9"
+msgstr "Label9"
+
+#. fmAbout..Button1..Caption
+#. fmConnect..btnOK..Caption
+#: fmuAbout.xfm:144 fmuConnect.xfm:100
+msgid "OK"
+msgstr "OK"
+
+#. fmAbout..Memo1....Lines.Strings
+#: fmuAbout.xfm:248
+msgid "115280, г. Москва,  ул. Мастеркова, д.4,"
+msgstr "115280, г. Москва,  ул. Мастеркова, д.4,"
+
+#. fmAbout..Memo1....Lines.Strings
+#: fmuAbout.xfm:249
+msgid "тел/факс. (095)787-60-90 (многоканальный)"
+msgstr "тел/факс. (095)787-60-90 (многоканальный)"
+
+#. fmConnect..btnAbout..Caption
+#: fmuConnect.xfm:35
+msgid "О драйвере"
+msgstr "О драйвере"
+
+#. fmConnect..btnFind..Caption
+#. fmSearch..Caption
+#: fmuConnect.xfm:44 fmuSearch.xfm:9
+msgid "Поиск оборудования"
+msgstr "Поиск оборудования"
+
+#. fmConnect..btnConnect..Caption
+#: fmuConnect.xfm:53
+msgid "Проверка связи"
+msgstr "Проверка связи"
+
+#. fmConnect..btnSetBaudRate..Caption
+#: fmuConnect.xfm:62
+msgid "Установить скорость"
+msgstr "Установить скорость"
+
+#. fmConnect..btnApply..Caption
+#: fmuConnect.xfm:81
+msgid "Применить"
+msgstr "Применить"
+
+#. fmConnect..btnCancel..Caption
+#. fmPassword..Button2..Caption
+#: fmuConnect.xfm:91 fmuPassword.xfm:58
+msgid "Отмена"
+msgstr "Отмена"
+
+#. fmConnect..gsParams..Caption
+#: fmuConnect.xfm:109
+msgid "Параметры связи"
+msgstr "Параметры связи"
+
+#. fmConnect..gsParams..lblBaudRate..Caption
+#: fmuConnect.xfm:116
+msgid "Скорость:"
+msgstr "Скорость:"
+
+#. fmConnect..gsParams..lblComNumber..Caption
+#: fmuConnect.xfm:123
+msgid "Номер порта:"
+msgstr "Номер порта:"
+
+#. fmConnect..gsParams..lblTimeout..Caption
+#: fmuConnect.xfm:130
+msgid "Таймаут:"
+msgstr "Таймаут:"
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:158
+msgid "Com1"
+msgstr "Com1"
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:159
+msgid "Com2"
+msgstr "Com2"
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:160
+msgid "Com3"
+msgstr "Com3"
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:161
+msgid "Com4"
+msgstr "Com4"
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:162
+msgid "Com5"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:163
+msgid "Com6"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:164
+msgid "Com7"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:165
+msgid "Com8"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:166
+msgid "Com9"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:167
+msgid "Com10"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:168
+msgid "Com11"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:169
+msgid "Com12"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:170
+msgid "Com13"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:171
+msgid "Com14"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:172
+msgid "Com15"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:173
+msgid "Com16"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:174
+msgid "Com17"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:175
+msgid "Com18"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:176
+msgid "Com19"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:177
+msgid "Com20"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:178
+msgid "Com21"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:179
+msgid "Com22"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:180
+msgid "Com23"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:181
+msgid "Com24"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:182
+msgid "Com25"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:183
+msgid "Com26"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:184
+msgid "Com27"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:185
+msgid "Com28"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:186
+msgid "Com29"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:187
+msgid "Com30"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:188
+msgid "Com31"
+msgstr ""
+
+#. fmConnect..gsParams..cbComNumber....Items.Strings
+#: fmuConnect.xfm:189
+msgid "Com32"
+msgstr ""
+
+#. fmConnect..gsParams..lblPassword..Caption
+#: fmuConnect.xfm:208
+msgid "Пароль:"
+msgstr "Пароль:"
+
+#. fmConnect..lblResult..Caption
+#: fmuConnect.xfm:226
+msgid "Результат:"
+msgstr "Результат:"
+
+#. fmEditLD..Caption
+#: fmuEditLD.xfm:9
+msgid "Работа с логическими устройствами"
+msgstr "Работа с логическими устройствами"
+
+#. fmEditLD..btnClose..Caption
+#. fmSearch..Panel1..Button3..Caption
+#: fmuEditLD.xfm:58 fmuSearch.xfm:69
+msgid "Закрыть"
+msgstr "Закрыть"
+
+#. fmEditLD..lwLD......Caption
+#: fmuEditLD.xfm:69
+msgid "Номер"
+msgstr "Номер"
+
+#. fmEditLD..lwLD......Caption
+#. fmEditLD..GroupBox1..Label1..Caption
+#: fmuEditLD.xfm:76 fmuEditLD.xfm:119
+msgid "Название"
+msgstr "Название"
+
+#. fmEditLD..btnAddLD..Caption
+#: fmuEditLD.xfm:93
+msgid "Добавить"
+msgstr "Добавить"
+
+#. fmEditLD..btnDelLD..Caption
+#: fmuEditLD.xfm:103
+msgid "Удалить"
+msgstr "Удалить"
+
+#. fmEditLD..GroupBox1..Caption
+#: fmuEditLD.xfm:112
+msgid "Параметры"
+msgstr "Параметры"
+
+#. fmEditLD..GroupBox1..Label2..Caption
+#: fmuEditLD.xfm:126
+msgid "Сом-порт"
+msgstr "Сом-порт"
+
+#. fmEditLD..GroupBox1..Label3..Caption
+#. fmPage1..Label4..Caption
+#: fmuEditLD.xfm:133 fmuPage1.xfm:78
+msgid "Скорость"
+msgstr "Скорость"
+
+#. fmEditLD..GroupBox1..Label8..Caption
+#: fmuEditLD.xfm:140
+msgid "Таймаут"
+msgstr "Таймаут"
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:157
+msgid "Сом1"
+msgstr "Сом1"
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:158
+msgid "Сом2"
+msgstr "Сом2"
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:159
+msgid "Сом3"
+msgstr "Сом3"
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:160
+msgid "Сом4"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:161
+msgid "Сом5"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:162
+msgid "Сом6"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:163
+msgid "Сом7"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:164
+msgid "Сом8"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:165
+msgid "Сом9"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:166
+msgid "Сом10"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:167
+msgid "Сом11"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:168
+msgid "Сом12"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:169
+msgid "Сом13"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:170
+msgid "Сом14"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:171
+msgid "Сом15"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:172
+msgid "Сом16"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:173
+msgid "Сом17"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:174
+msgid "Сом18"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:175
+msgid "Сом19"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:176
+msgid "Сом20"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:177
+msgid "Сом21"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:178
+msgid "Сом22"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:179
+msgid "Сом23"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:180
+msgid "Сом24"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:181
+msgid "Сом25"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:182
+msgid "Сом26"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:183
+msgid "Сом27"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:184
+msgid "Сом28"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:185
+msgid "Сом29"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:186
+msgid "Сом30"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:187
+msgid "Сом31"
+msgstr ""
+
+#. fmEditLD..GroupBox1..cbCNLD....Items.Strings
+#: fmuEditLD.xfm:188
+msgid "Сом32"
+msgstr ""
+
+#. fmEditLD..GroupBox1..Button2..Caption
+#: fmuEditLD.xfm:221
+msgid "Получить текущие параметры"
+msgstr ""
+
+#. fmEditLD..Button1..Caption
+#: fmuEditLD.xfm:240
+msgid "Изменить"
+msgstr ""
+
+#. fmMain..Caption
+#: fmuMain.xfm:9
+msgid "Штрих-М: Программа градуировки весовой ячейки ВМ-100"
+msgstr ""
+
+#. fmMain..btnNext..Caption
+#: fmuMain.xfm:40
+msgid "Далее >>"
+msgstr ""
+
+#. fmMain..btnPrev..Caption
+#: fmuMain.xfm:50
+msgid "<< Назад"
+msgstr ""
+
+#. fmPage1..Caption
+#: fmuPage1.xfm:9
+msgid "fmPage1"
+msgstr ""
+
+#. fmPage1..Label1....Caption
+#: fmuPage1.xfm:37
+msgid ""
+"  Для начала процесса градуировки необходимо установить связь с весовой "
+"ячейкой."
+msgstr ""
+
+#. fmPage1..Label2....Caption
+#: fmuPage1.xfm:56
+msgid ""
+"  Выберите номер СОМ-порта, скорость и пароль. Если параметры связи "
+"неизвестны нажмите кнопку \"Настройка связи\" для поиска устройства и "
+"установления соединения."
+msgstr ""
+
+#. fmPage1..Label3..Caption
+#: fmuPage1.xfm:71
+msgid "СОМ- порт"
+msgstr ""
+
+#. fmPage1..Label5..Caption
+#: fmuPage1.xfm:87
+msgid "Для продолжения нажмите кнопку \"Далее\"."
+msgstr ""
+
+#. fmPage1..Label6..Caption
+#: fmuPage1.xfm:102
+msgid "Пароль"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:112
+msgid "COM1"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:113
+msgid "COM2"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:114
+msgid "COM3"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:115
+msgid "COM4"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:116
+msgid "COM5"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:117
+msgid "COM6"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:118
+msgid "COM7"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:119
+msgid "COM8"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:120
+msgid "COM9"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:121
+msgid "COM10"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:122
+msgid "COM11"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:123
+msgid "COM12"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:124
+msgid "COM13"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:125
+msgid "COM14"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:126
+msgid "COM15"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:127
+msgid "COM16"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:128
+msgid "COM17"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:129
+msgid "COM18"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:130
+msgid "COM19"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:131
+msgid "COM20"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:132
+msgid "COM21"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:133
+msgid "COM22"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:134
+msgid "COM23"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:135
+msgid "COM24"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:136
+msgid "COM25"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:137
+msgid "COM26"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:138
+msgid "COM27"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:139
+msgid "COM28"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:140
+msgid "COM29"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:141
+msgid "COM30"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:142
+msgid "COM31"
+msgstr ""
+
+#. fmPage1..ComboBox1....Items.Strings
+#: fmuPage1.xfm:143
+msgid "COM32"
+msgstr ""
+
+#. fmPage1..Button1..Caption
+#: fmuPage1.xfm:170
+msgid "Настройка связи"
+msgstr ""
+
+#. fmPage2..Caption
+#: fmuPage2.xfm:10
+msgid "fmPage2"
+msgstr ""
+
+#. fmPage2..Label1....Caption
+#: fmuPage2.xfm:31
+msgid ""
+"  Связь установлена. Выберите из списка весовой канал, который необходимо "
+"градуировать."
+msgstr ""
+
+#. fmPage2..Label5....Caption
+#. fmPage2_5..Label5....Caption
+#. fmPage3..Label5....Caption
+#. fmPage4..Label5....Caption
+#: fmuPage2.xfm:49 fmuPage2_5.xfm:82 fmuPage3.xfm:98 fmuPage4.xfm:49
+msgid ""
+"Для продолжения нажмите кнопку \"Далее\", для возврата к предыдущему шагу - "
+"\"Назад\"."
+msgstr ""
+
+#. fmPage2..Label2..Caption
+#: fmuPage2.xfm:65
+msgid "Устройство:"
+msgstr ""
+
+#. fmPage2..Label3..Caption
+#: fmuPage2.xfm:72
+msgid "       "
+msgstr ""
+
+#. fmPage2..Button1..Caption
+#: fmuPage2.xfm:105
+msgid "Button1"
+msgstr ""
+
+#. fmPage2_5..Caption
+#: fmuPage2_5.xfm:10
+msgid "fmPage2_5"
+msgstr ""
+
+#. fmPage2_5..Label1..Caption
+#: fmuPage2_5.xfm:31
+msgid "  Выставление начального значения АЦП"
+msgstr ""
+
+#. fmPage2_5..Label2..Caption
+#: fmuPage2_5.xfm:46
+msgid "  Значение АЦП:"
+msgstr ""
+
+#. fmPage2_5..Label4..Caption
+#: fmuPage2_5.xfm:63
+msgid "Выставьте значение АЦП согласно документации на весовой модуль"
+msgstr ""
+
+#. fmPage3..Caption
+#: fmuPage3.xfm:9
+msgid "fmPage3"
+msgstr ""
+
+#. fmPage3..Label1....Caption
+#. fmPage4..Label1....Caption
+#: fmuPage3.xfm:30 fmuPage4.xfm:31
+msgid "  Процесс градуировки начался. Следуйте указаниям для продолжения."
+msgstr ""
+
+#. fmPage3..Label2..Caption
+#: fmuPage3.xfm:46
+msgid "  Положите на платформу вес 0 кг."
+msgstr ""
+
+#. fmPage3..Label3..Caption
+#. fmPage4..Label3..Caption
+#: fmuPage3.xfm:62 fmuPage4.xfm:65
+msgid "Внимание:"
+msgstr ""
+
+#. fmPage3..Label4....Caption
+#: fmuPage3.xfm:80
+msgid ""
+"Убедитесь, что весовой модуль находится на горизонтальной и устойчивой "
+"поверхности"
+msgstr ""
+
+#. fmPage3..Label8..Caption
+#. fmPage4..Label8..Caption
+#: fmuPage3.xfm:114 fmuPage4.xfm:150
+msgid "  Градуируется реперная точка №1 (вес 0 кг)."
+msgstr ""
+
+#. fmPage4..Caption
+#: fmuPage4.xfm:9
+msgid "fmPage4"
+msgstr ""
+
+#. fmPage4..Label4....Caption
+#: fmuPage4.xfm:84
+msgid ""
+"Не трогайте весовой модуль и груз на нем, постарайтесь оградить устройство "
+"от колебаний и вибраций (например, не стоит опираться на стол, на котором "
+"стоит весовой модуль)"
+msgstr ""
+
+#. fmPage4..Label6....Caption
+#: fmuPage4.xfm:102
+msgid ""
+"  Процесс градуировки может занять несколько минут. Дождитесь окончания "
+"процесса."
+msgstr ""
+
+#. fmPage4..Label2..Caption
+#: fmuPage4.xfm:117
+msgid "Состояние процесса градуировки:"
+msgstr ""
+
+#. fmPage4..Label7..Caption
+#: fmuPage4.xfm:132
+msgid "                     "
+msgstr ""
+
+#. fmPage5..Caption
+#: fmuPage5.xfm:8
+msgid "fmPage5"
+msgstr ""
+
+#. fmPage5..Label6..Caption
+#: fmuPage5.xfm:44
+msgid "Возможные причины ошибки:"
+msgstr "Возможные причины ошибки:"
+
+#. fmPassword..Caption
+#: fmuPassword.xfm:10
+msgid "Вход в режим градуировки"
+msgstr ""
+
+#. fmPassword..Label1....Caption
+#: fmuPassword.xfm:33
+msgid ""
+"Для входа в режим градуировки  необходимо  перевести градуировочный "
+"переключатель весов в положение \"ГРАДУИРОВКА\" . Нажмите \"ОК\"  для "
+"продолжения или \"Отмена\" для прекращения градуировки."
+msgstr ""
+
+#. fmPassword..Button1..Caption
+#: fmuPassword.xfm:48
+msgid "ОК"
+msgstr ""
+
+#. fmSearch..Panel1..Button2..Caption
+#: fmuSearch.xfm:39
+msgid "Начать поиск"
+msgstr ""
+
+#. fmSearch..PageControl..TabSheet1..Caption
+#: fmuSearch.xfm:83
+msgid "RS-232"
+msgstr ""
+
+#. fmSearch..PageControl..TabSheet1..ListView1......Caption
+#: fmuSearch.xfm:92
+msgid "Номер Сом-порта"
+msgstr ""
+
+#. fmSearch..PageControl..TabSheet1..ListView1......Caption
+#: fmuSearch.xfm:98
+msgid "Cкорость"
+msgstr ""
+
+#. fmSearch..PageControl..TabSheet1..ListView1......Caption
+#: fmuSearch.xfm:104
+msgid "Название устройства"
+msgstr ""

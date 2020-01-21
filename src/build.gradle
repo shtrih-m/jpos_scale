@@ -1,0 +1,42 @@
+def getVersionName2() {
+    def text = "git describe --tags".execute().text.trim()
+     
+    return text
+}
+
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'idea'
+
+    version = getVersionName2()
+    
+    sourceCompatibility = '1.6'
+    targetCompatibility = '1.6'
+    [compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+
+    jar {
+        manifest.attributes provider: 'gradle'
+    }
+    
+    clean.doFirst {
+        delete "${rootDir}/../dist/zip/javase"
+        delete "${rootDir}/../bin/"
+        delete "${rootDir}/out/"
+        delete "${rootDir}/.gradle/"
+    }
+}
+
+def getVersionName = { ->
+    def hashStdOut = new ByteArrayOutputStream()
+    exec {
+        commandLine "git", "rev-parse", "--short", "HEAD"
+        standardOutput = hashStdOut
+    }
+ 
+    def buildNumberStdOut = new ByteArrayOutputStream()
+    exec {
+        commandLine 'echo', "$BUILD_NUMBER"
+        standardOutput = buildNumberStdOut
+    }
+    return buildNumberStdOut.toString().trim() + '-' + hashStdOut.toString().trim()
+}

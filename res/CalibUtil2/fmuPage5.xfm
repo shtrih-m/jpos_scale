@@ -1,0 +1,54 @@
+object fmPage5: TfmPage5
+  Tag = 5
+  Left = 244
+  Top = 122
+  Width = 448
+  Height = 348
+  VertScrollBar.Range = 225
+  Caption = 'fmPage5'
+  Color = clButton
+  Font.Color = clText
+  Font.Height = 11
+  Font.Name = 'MS Sans Serif'
+  Font.Pitch = fpVariable
+  Font.Style = []
+  Font.Weight = 40
+  ParentFont = False
+  Scaled = False
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  object Label1: TLabel
+    Left = 8
+    Top = 8
+    Width = 425
+    Height = 73
+    Anchors = [akLeft, akTop, akRight]
+    AutoSize = False
+    Caption = '  '#1043#1088#1072#1076#1091#1080#1088#1086#1074#1082#1072' '#1079#1072#1074#1077#1088#1096#1077#1085#1072' '#1089' '#1086#1096#1080#1073#1082#1086#1081'. '#1056#1077#1087#1077#1088#1085#1099#1077' '#1090#1086#1095#1082#1080' '#1085#1077' '#1080#1079#1084#1077#1085#1077#1085#1099'.'
+    Font.Color = clNavy
+    Font.Height = 16
+    Font.Name = 'MS Sans Serif'
+    Font.Pitch = fpVariable
+    Font.Style = [fsBold]
+    ParentFont = False
+    WordWrap = True
+  end
+  object Label6: TLabel
+    Left = 8
+    Top = 80
+    Width = 425
+    Height = 145
+    Anchors = [akLeft, akTop, akRight]
+    AutoSize = False
+    Caption = #1042#1086#1079#1084#1086#1078#1085#1099#1077' '#1087#1088#1080#1095#1080#1085#1099' '#1086#1096#1080#1073#1082#1080':'
+    Font.Color = clNavy
+    Font.Height = 13
+    Font.Name = 'MS Sans Serif'
+    Font.Pitch = fpVariable
+    Font.Style = []
+    Font.Weight = 40
+    ParentFont = False
+    WordWrap = True
+  end
+end

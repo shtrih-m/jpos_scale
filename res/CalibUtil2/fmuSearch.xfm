@@ -1,0 +1,116 @@
+object fmSearch: TfmSearch
+  Left = 495
+  Top = 216
+  Width = 555
+  Height = 463
+  VertScrollBar.Range = 50
+  ActiveControl = Button2
+  BorderIcons = []
+  Caption = #1055#1086#1080#1089#1082' '#1086#1073#1086#1088#1091#1076#1086#1074#1072#1085#1080#1103
+  Color = clButton
+  Constraints.MinHeight = 290
+  Constraints.MinWidth = 330
+  Font.Color = clText
+  Font.Height = 11
+  Font.Name = 'MS Sans Serif'
+  Font.Pitch = fpVariable
+  Font.Style = []
+  Font.Weight = 40
+  ParentFont = False
+  OnClose = FormClose
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  TextWidth = 6
+  object Panel1: TPanel
+    Left = 0
+    Top = 413
+    Width = 555
+    Height = 50
+    Align = alBottom
+    BevelOuter = bvNone
+    TabOrder = 0
+    object Button2: TButton
+      Left = 282
+      Top = 12
+      Width = 83
+      Height = 25
+      Anchors = [akTop, akRight]
+      Caption = #1053#1072#1095#1072#1090#1100' '#1087#1086#1080#1089#1082
+      TabOrder = 0
+      OnClick = Button2Click
+    end
+    object Button1: TButton
+      Left = 373
+      Top = 12
+      Width = 83
+      Height = 25
+      Anchors = [akTop, akRight]
+      Caption = #1055#1088#1077#1088#1074#1072#1090#1100
+      Enabled = False
+      TabOrder = 1
+      OnClick = Button1Click
+    end
+    object Animate1: TAnimate
+      Left = 13
+      Top = 8
+      Width = 36
+      Height = 33
+      AutoSize = False
+      StopFrame = 8
+      Visible = False
+    end
+    object Button3: TButton
+      Left = 461
+      Top = 12
+      Width = 83
+      Height = 25
+      Anchors = [akTop, akRight]
+      Caption = #1047#1072#1082#1088#1099#1090#1100
+      TabOrder = 2
+      OnClick = Button3Click
+    end
+  end
+  object PageControl: TPageControl
+    Left = 0
+    Top = 0
+    Width = 555
+    Height = 413
+    ActivePage = TabSheet1
+    Align = alClient
+    TabOrder = 1
+    object TabSheet1: TTabSheet
+      Caption = 'RS-232'
+      object ListView1: TListView
+        Left = 0
+        Top = 0
+        Width = 547
+        Height = 383
+        Align = alClient
+        Columns = <
+          item
+            Caption = #1053#1086#1084#1077#1088' '#1057#1086#1084'-'#1087#1086#1088#1090#1072
+            Tag = 0
+            Width = 107
+          end
+          item
+            Alignment = taCenter
+            Caption = 'C'#1082#1086#1088#1086#1089#1090#1100
+            Tag = 0
+            Width = 80
+          end
+          item
+            AutoSize = True
+            Caption = #1053#1072#1079#1074#1072#1085#1080#1077' '#1091#1089#1090#1088#1086#1081#1089#1090#1074#1072
+            Tag = 0
+            Width = 50
+          end>
+        RowSelect = True
+        ReadOnly = True
+        TabOrder = 0
+        ViewStyle = vsReport
+        OnDblClick = ListView1DblClick
+      end
+    end
+  end
+end

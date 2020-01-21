@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE JposEntries PUBLIC "-//JavaPOS//DTD//EN"
+                             "jpos/res/jcl.dtd">
+<JposEntries>
+<!--Saved by JavaPOS jpos.config/loader (JCL) version 2.1.0-RC3 on 10/26/04 8:17 AM-->
+   <JposEntry logicalName="VirtualLineDisplay">
+        <creation factoryClass="com.xyz.jpos.XyzJposServiceInstanceFactory" serviceClass="com.xyz.jpos.LineDisplayService"/>
+        <vendor name="Xyz, Corp." url="http://www.javapos.com"/>
+        <jpos category="LineDisplay" version="1.5"/>
+        <product description="Example virtual LineDisplay JavaPOS Service from virtual Xyz Corporation" name="Xyz Virtual LineDisplay Service for JavaPOS(TM) Standard" url="http://www.javapos.com"/>
+
+        <!--Other non JavaPOS required property (mostly vendor properties and bus specific properties i.e. RS232 )-->
+    </JposEntry> 
+   <JposEntry logicalName="Scale">
+        <creation factoryClass="com.shtrih.jpos.EquipmentServiceInstanceFactory" serviceClass="com.shtrih.jpos.scale.ScaleService"/>
+        <vendor name="SHTRIH-M" url="http://www.shtrih-m.com"/>
+        <jpos category="Scale" version="1.1"/>
+        <product description="Scale service" name="Scale" url="http://www.javapos.com"/>
+		
+        <prop name="portName" type="String" value="COM3"/>
+        <prop name="baudRate" type="String" value="9600"/>
+        <prop name="protocol" type="String" value="pos2"/>
+        <prop name="password" type="String" value="30"/>
+        <prop name="timeout" type="String" value="100"/>
+    </JposEntry> 
+    
+</JposEntries>
