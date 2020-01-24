@@ -4,7 +4,7 @@ import java.io.IOException;
 import com.shtrih.DeviceError;
 import com.shtrih.scale.ScaleCommand;
 import com.shtrih.scale.ScaleSerial;
-import com.shtrih.serialport.SerialPort;
+import com.shtrih.port.SerialPort;
 import org.apache.log4j.Logger;
 
 /* 
@@ -15,7 +15,7 @@ public class ShtrihMProtocolSerial {
 
     private static final int maxENQCount = 1;
     private int byteTimeout = 100;
-    private SerialPort serialPort;
+    private final SerialPort serialPort;
     private final Logger logger = Logger.getLogger(ShtrihMProtocolSerial.class);
 
     public ShtrihMProtocolSerial(SerialPort serialPort) {
@@ -86,8 +86,9 @@ public class ShtrihMProtocolSerial {
         int confirmation;
         do {
             try {
-                serialPort.writeBytes(buffer);
-                confirmation = serialPort.readByte(byteTimeout);
+                serialPort.write(buffer);
+                serialPort.setTimeout(byteTimeout);
+                confirmation = serialPort.readByte();
                 if (confirmation == SerialPort.ACK) {
                     return;
                 } else if (confirmation == SerialPort.NAK) { // Команда не принята
@@ -107,29 +108,28 @@ public class ShtrihMProtocolSerial {
     protected ScaleCommand readReply(int timeout) throws Exception {
         int stx, cmd, len, lrc;
         int attempts = 3;
-        SerialPort.Buffer buffer = this.serialPort.new Buffer();
         ScaleCommand command = new ScaleCommand((byte) 0, 0);
 
         do {
             // STX
             while (true) {
-                stx = this.serialPort.readByte(timeout);
+                serialPort.setTimeout(timeout);
+                stx = serialPort.readByte();
                 if (stx == SerialPort.STX) {
                     break;
                 }
             }
+            serialPort.setTimeout(byteTimeout);
             // Длина
-            len = this.serialPort.readByte(byteTimeout);
+            len = serialPort.readByte();
             // Код команды
-            cmd = this.serialPort.readByte(byteTimeout);
-
+            cmd = serialPort.readByte();
             // Данные
-            serialPort.read(buffer, len - 1, byteTimeout);
-
+            byte data[] = serialPort.readBytes(len - 1);
             // LRC
-            lrc = this.serialPort.readByte(byteTimeout);
+            lrc = serialPort.readByte();
             command = new ScaleCommand((byte) cmd, 1000);
-            command.setData(buffer.data);
+            command.setData(data);
             command.crc = (byte) lrc;
             break;
         } while (attempts > 0);
@@ -139,9 +139,10 @@ public class ShtrihMProtocolSerial {
     protected int requestCommand() throws Exception {
         int b = 0;
         for (int i = 0; i < maxENQCount; i++) {
-            this.serialPort.writeByte(SerialPort.ENQ);
+            serialPort.write(SerialPort.ENQ);
             try {
-                b = this.serialPort.readByte(byteTimeout);
+                serialPort.setTimeout(byteTimeout);
+                b = serialPort.readByte();
                 return b;
             } catch (Exception e) {
                 logger.error(e);

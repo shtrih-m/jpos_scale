@@ -12,7 +12,7 @@ import com.shtrih.scale.Pos2Serial;
 import com.shtrih.scale.ChannelParams;
 import com.shtrih.scale.DeviceMetrics;
 import com.shtrih.scale.CalibrationStatus;
-import com.shtrih.serialport.SerialPort;
+import com.shtrih.port.GnuSerialPort;
 import org.apache.log4j.Logger;
 
 public class SmScale {
@@ -42,7 +42,7 @@ public class SmScale {
 
     public String getDefaultPortName() {
         String result = "COM1";
-        Vector<String> portNames = SerialPort.getPortList();
+        Vector<String> portNames = GnuSerialPort.getPortList();
         if (portNames.size() > 0) {
             result = portNames.get(0);
         }
@@ -95,9 +95,8 @@ public class SmScale {
         prefs.putInt("timeout", timeout);
         prefs.put("password", password);
 
-        protocol.setPortName(portName);
-        protocol.setBaudRate(baudRate);
-
+        protocol.setParam(IDevice.PARAM_PORTNAME, portName);
+        protocol.setParam(IDevice.PARAM_BAUDRATE, String.valueOf(baudRate));
         protocol.setParam(IDevice.PARAM_DATABITS, "8");
         protocol.setParam(IDevice.PARAM_STOPBITS, "1");
         protocol.setParam(IDevice.PARAM_PARITY, "0");

@@ -1,7 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: ShtrihM.JavaPOS
-Implementation-Version: 
-provider: gradle
-Class-Path: jpos113.jar jpos113-controls.jar log4j-1.2.15.jar xerces.j
- ar RXTXcomm.jar
-

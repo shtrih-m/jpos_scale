@@ -1,4 +1,4 @@
-package com.shtrih.serialport;
+package com.shtrih.port;
 
 import org.apache.log4j.Logger;
 import java.io.IOException;
@@ -10,28 +10,29 @@ import java.util.LinkedList;
 import java.util.Vector;
 import gnu.io.UnsupportedCommOperationException;
 
-import com.shtrih.DeviceError;
 import com.shtrih.IDevice;
-import com.shtrih.tools.Logger2;
+import com.shtrih.DeviceError;
 import com.shtrih.tools.Tools;
+import com.shtrih.tools.Logger2;
+import com.shtrih.port.SerialPort;
 
-public class SerialPort {
+public class GnuSerialPort implements SerialPort {
 
-    private final Logger logger = Logger.getLogger(SerialPort.class);
+    private final Logger logger = Logger.getLogger(GnuSerialPort.class);
 
-    protected gnu.io.SerialPort port;
-
-    protected String appName = SerialPort.class.getName();
-    protected String portName = "COM1";
-    protected int baudrate = 115200;
-    protected int dataBits = gnu.io.SerialPort.DATABITS_8;
-    protected int stopBits = gnu.io.SerialPort.STOPBITS_1;
-    protected int parity = gnu.io.SerialPort.PARITY_NONE;
-    protected int openTimeout = 1000;
-
-    private long idleTimeoutMS = 0;
-    private int idleTimeoutNS = 1;
-
+    private final int bufferSize = 2048;
+    private gnu.io.SerialPort port;
+    public String appName = GnuSerialPort.class.getName();
+    public String portName = "COM1";
+    public int baudRate = 115200;
+    public int dataBits = gnu.io.SerialPort.DATABITS_8;
+    public int stopBits = gnu.io.SerialPort.STOPBITS_1;
+    public int parity = gnu.io.SerialPort.PARITY_NONE;
+    public int openTimeout = 1000;
+    public long idleTimeoutMS = 0;
+    public int idleTimeoutNS = 1;
+    private int readTimeout = 1000;
+            
     public static final int ERROR_NONE = 0;
     public static final int ERROR_UNKNOWN = -1;
     public static final int ERROR_PORTINUSE = -2;
@@ -50,25 +51,15 @@ public class SerialPort {
     public static final String TEXT_ERROR_UNSUPPORT = "Не поддерживается";
     public static final String TEXT_ERROR_TIMEOUT = "Нет связи";
     public static final String TEXT_ERROR_PORTINUSE = "Невозможно открыть порт.";
-
-    public static final byte STX = 0x02;
-    public static final byte ETX = 0x03;
-    public static final byte EOT = 0x04;
-    public static final byte ENQ = 0x05;
-    public static final byte ACK = 0x06;
-    public static final byte DLE = 0x10;
-    public static final byte NAK = 0x15;
-
-    final int bufferSize = 2048;
-
-    public SerialPort() {
+    
+    public GnuSerialPort() {
     }
 
     public void setSerialParams(String appName, String portName, int baudrate,
             int dataBits, int stopBits, int parity, int openTimeout) {
         this.appName = appName;
         this.portName = portName;
-        this.baudrate = baudrate;
+        this.baudRate = baudrate;
         this.dataBits = dataBits;
         this.stopBits = stopBits;
         this.parity = parity;
@@ -101,7 +92,7 @@ public class SerialPort {
         if (port == null) {
             throw new gnu.io.NoSuchPortException();
         }
-        port.setSerialPortParams(this.baudrate, this.dataBits,
+        port.setSerialPortParams(this.baudRate, this.dataBits,
                 this.stopBits, this.parity);
         port.setInputBufferSize(1024);
         port.setOutputBufferSize(1024);
@@ -109,8 +100,10 @@ public class SerialPort {
         port.enableReceiveTimeout(openTimeout);
     }
 
-    public void setTimeout(int timeout) throws Exception {
+    public void setTimeout(int timeout) throws Exception 
+    {
         port.enableReceiveTimeout(timeout);
+        readTimeout = timeout;
     }
 
     public void close() {
@@ -138,7 +131,7 @@ public class SerialPort {
         }
     }
 
-    public int readByte(int timeout) throws Exception {
+    public int readByte() throws Exception {
         open();
 
         int result;
@@ -158,7 +151,7 @@ public class SerialPort {
                         return result;
                     }
                 }
-                if ((currentTime - startTime) > timeout) {
+                if ((currentTime - startTime) > readTimeout) {
                     throw new DeviceError(IDevice.ERROR_NOLINK, IDevice.TEXT_ERROR_NOLINK);
                 }
             }
@@ -168,17 +161,17 @@ public class SerialPort {
         }
     }
 
-    public void read(SerialPort.Buffer out, int expectedBytes, int timeout) throws Exception {
+    public void read(GnuSerialPort.Buffer out, int expectedBytes, int timeout) throws Exception {
         if (timeout < 100) {
             timeout = 100;
         }
         if (expectedBytes <= 0) {
             return;
         }
-
+        setTimeout(timeout);
         out.data = new byte[expectedBytes];
         for (int i = 0; i < expectedBytes; i++) {
-            int b = readByte(timeout);
+            int b = readByte();
             out.data[i] = (byte) b;
             Tools.sleep(idleTimeoutMS, idleTimeoutNS);
         }
@@ -186,19 +179,31 @@ public class SerialPort {
         Logger2.logRx(logger, out.data);
     }
 
-    public void read(SerialPort.Buffer out, int timeout) throws Exception {
+    public void read(GnuSerialPort.Buffer out, int timeout) throws Exception {
         read(out, -1, timeout);
     }
 
+    public byte[] readBytes(int len) throws Exception
+    {
+        byte[] result = new byte[len];
+        for (int i = 0; i < len; i++) 
+        {
+            int b = readByte();
+            result[i] = (byte) b;
+        }
+        Logger2.logRx(logger, result);
+        return result;
+    }
+    
     public void write(ByteBuffer in) throws Exception {
-        writeBytes(in.array());
+        write(in.array());
     }
 
-    public void write(SerialPort.Buffer in) throws Exception {
+    public void write(GnuSerialPort.Buffer in) throws Exception {
         write(in, false);
     }
 
-    public void write(SerialPort.Buffer in, boolean flush) throws Exception {
+    public void write(GnuSerialPort.Buffer in, boolean flush) throws Exception {
         Logger2.logTx(logger, in.data);
 
         open();
@@ -215,19 +220,19 @@ public class SerialPort {
     }
 
     public void writeBytes(byte[] a, boolean flush) throws Exception {
-        write(new SerialPort.Buffer(a), flush);
+        write(new GnuSerialPort.Buffer(a), flush);
     }
 
-    public void writeBytes(byte[] a) throws Exception {
-        writeBytes(a, false);
+    public void writeByte(int b, boolean flush) throws Exception {
+        write(new GnuSerialPort.Buffer(new byte[]{(byte)b}), flush);
     }
 
-    public void writeByte(byte b, boolean flush) throws Exception {
-        write(new SerialPort.Buffer(new byte[]{b}), flush);
-    }
-
-    public void writeByte(byte b) throws Exception {
+    public void write(int b) throws Exception {
         writeByte(b, false);
+    }
+
+    public void write(byte[] a) throws Exception {
+        writeBytes(a, false);
     }
 
     public boolean isOpened() {
@@ -293,4 +298,15 @@ public class SerialPort {
         return names;
     }
 
+    public String[] getPortNames() {
+        Vector result = new Vector();
+        Enumeration e = gnu.io.CommPortIdentifier.getPortIdentifiers();
+        while (e.hasMoreElements()) {
+            gnu.io.CommPortIdentifier port = (gnu.io.CommPortIdentifier) e.nextElement();
+            if (port.getPortType() == gnu.io.CommPortIdentifier.PORT_SERIAL) {
+                result.add(port.getName());
+            }
+        }
+        return (String[]) result.toArray(new String[0]);
+    }
 }

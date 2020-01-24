@@ -7,9 +7,7 @@ import org.apache.log4j.Logger;
 
 public class Pos2Serial extends ScaleSerial {
 
-    private final ShtrihMProtocolSerial protocol = new ShtrihMProtocolSerial(
-            this.serialPort);
-
+    private ShtrihMProtocolSerial protocol = null;
     private final Logger logger = Logger.getLogger(Pos2Serial.class);
 
     // //////////////////////////////////////////////////////////////////////////
@@ -64,9 +62,16 @@ public class Pos2Serial extends ScaleSerial {
         return EScale.Pos2;
     }
 
+    private ShtrihMProtocolSerial getProtocol() throws Exception {
+        if (protocol == null){
+            protocol = new ShtrihMProtocolSerial(getSerialPort());        
+        }
+        return protocol;
+    }
+    
     public void connect() throws Exception {
-        int byteTimeout = params.getIntParam(IDevice.PARAM_OPEN_TIMEOUT);
-        protocol.setByteTimeout(byteTimeout);
+        int byteTimeout = params.getInt(IDevice.PARAM_OPEN_TIMEOUT);
+        getProtocol().setByteTimeout(byteTimeout);
         openPort();
     }
 
@@ -123,7 +128,7 @@ public class Pos2Serial extends ScaleSerial {
     }
 
     public String getPassword() throws Exception {
-        long password = params.getIntParam(IDevice.PARAM_PASSWORD);
+        long password = params.getInt(IDevice.PARAM_PASSWORD);
         String result = String.valueOf(password);
         int len = 4 - result.length();
         for (int i = 0; i < len; i++) {
@@ -361,7 +366,7 @@ public class Pos2Serial extends ScaleSerial {
         logger.debug(CommandSeparator);
         logger.debug(getCommandText(command.cmd));
 
-        reply = protocol.execCommand(command);
+        reply = getProtocol().execCommand(command);
         int rc = reply.readByte();
         logger.debug(CommandSeparator);
         if (rc != 0) {

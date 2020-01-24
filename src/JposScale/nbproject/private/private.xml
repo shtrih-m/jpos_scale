@@ -3,8 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/projects/JavaScale/src/SmScale/src/com/shtrih/jpos/scale/ScaleService.java</file>
-            <file>file:/C:/projects/JavaScale/src/SmScale/src/com/shtrih/serialport/SerialPort.java</file>
+            <file>file:/C:/projects/JposScale/src/JposScale/src/com/shtrih/port/GnuSerialPort.java</file>
+            <file>file:/C:/projects/JposScale/src/JposScale/src/com/shtrih/port/SerialPort.java</file>
+            <file>file:/C:/projects/JposScale/src/JposScale/src/com/shtrih/port/TcpSocketPort.java</file>
+            <file>file:/C:/projects/JposScale/src/JposScale/src/com/shtrih/ShtrihMProtocolSerial.java</file>
+            <file>file:/C:/projects/JposScale/src/JposScale/src/com/shtrih/scalecalib/SmScale.java</file>
+            <file>file:/C:/projects/JposScale/src/JposScale/src/com/shtrih/scale/ScaleSerial.java</file>
         </group>
     </open-files>
 </project-private>

@@ -3,8 +3,9 @@ package com.shtrih.scalecalib;
 import java.util.Vector;
 
 import com.shtrih.IDevice;
+import com.shtrih.tools.StringParams;
 import com.shtrih.scale.Pos2Serial;
-import com.shtrih.serialport.SerialPort;
+import com.shtrih.port.GnuSerialPort;
 import org.apache.log4j.Logger;
 
 // Single thread device find
@@ -89,14 +90,15 @@ public class DeviceFindSingle implements Runnable {
             int resultCode = 0;
             Pos2Serial device = new Pos2Serial();
             try {
-                device.setPortName(portName);
-                device.setBaudRate(baudRate);
-                device.setParam(IDevice.PARAM_DATABITS, "8");
-                device.setParam(IDevice.PARAM_STOPBITS, "1");
-                device.setParam(IDevice.PARAM_PARITY, "0");
-                device.setParam(IDevice.PARAM_APPNAME, "Программа градуировки");
-                device.setParam(IDevice.PARAM_OPEN_TIMEOUT,
-                        String.valueOf(timeout));
+                StringParams params = new StringParams();
+                params.set(IDevice.PARAM_PORTNAME, portName);
+                params.set(IDevice.PARAM_BAUDRATE, String.valueOf(baudRate));
+                params.set(IDevice.PARAM_DATABITS, "8");
+                params.set(IDevice.PARAM_STOPBITS, "1");
+                params.set(IDevice.PARAM_PARITY, "0");
+                params.set(IDevice.PARAM_APPNAME, "Программа градуировки");
+                params.set(IDevice.PARAM_OPEN_TIMEOUT, String.valueOf(timeout));
+                device.setParams(params);
 
                 device.connect();
                 device.readDeviceMetrics();
@@ -135,7 +137,7 @@ public class DeviceFindSingle implements Runnable {
 
     public void updateItems() {
         stop();
-        Vector ports = SerialPort.getPortList();
+        Vector ports = GnuSerialPort.getPortList();
         items.clear();
         for (int i = 0; i < ports.size(); i++) {
             DeviceItem item = new DeviceItem((String) ports.get(i));

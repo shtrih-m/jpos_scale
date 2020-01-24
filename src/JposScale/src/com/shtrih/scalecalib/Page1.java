@@ -27,7 +27,7 @@ import javax.swing.border.Border;
 
 import org.eclipse.wb.swing.FocusTraversalOnArray;
 
-import com.shtrih.serialport.SerialPort;
+import com.shtrih.port.GnuSerialPort;
 import javax.swing.JOptionPane;
 
 public class Page1 extends Page {
@@ -162,7 +162,7 @@ public class Page1 extends Page {
 
     public void updatePortList() {
         String portName = (String) cbPortName.getSelectedItem();
-        ComboBoxModel model = new DefaultComboBoxModel(SerialPort.getPortList()
+        ComboBoxModel model = new DefaultComboBoxModel(GnuSerialPort.getPortList()
                 .toArray());
         cbPortName.setModel(model);
         cbPortName.setSelectedItem(portName);

@@ -5,33 +5,16 @@ import org.apache.log4j.Logger;
 import com.shtrih.IDevice;
 import com.shtrih.DeviceError;
 import com.shtrih.EquipmentTools;
+import com.shtrih.port.SerialPort;
 import com.shtrih.tools.StringParams;
-import com.shtrih.serialport.SerialPort;
+import com.shtrih.port.GnuSerialPort;
+import com.shtrih.port.TcpSocketPort;
 
 public class ScaleSerial implements IScale, IDevice {
 
-    private final Logger logger = Logger.getLogger(ScaleSerial.class);
-
-    private String portName = "";
-    private int baudRate = 4800;
-    protected final SerialPort serialPort = new SerialPort();
+    private SerialPort serialPort = null;
     protected StringParams params = new StringParams();
-
-    public String getPortName() {
-        return portName;
-    }
-
-    public void setPortName(String value) {
-        portName = value;
-    }
-
-    public void setBaudRate(int value) {
-        baudRate = value;
-    }
-
-    public int getBaudRate() {
-        return baudRate;
-    }
+    private final Logger logger = Logger.getLogger(ScaleSerial.class);
 
     public String getErrorText(int error) {
         switch (error) {
@@ -101,8 +84,7 @@ public class ScaleSerial implements IScale, IDevice {
 
     public void openPort() throws Exception {
         logger.debug("openPort()");
-        prepareParams();
-        serialPort.open();
+        getSerialPort().open();
         logger.debug("openPort: OK");
     }
 
@@ -111,95 +93,78 @@ public class ScaleSerial implements IScale, IDevice {
     }
 
     public void closePort() {
-        serialPort.close();
+        try {
+            getSerialPort().close();
+        } catch (Exception e) {
+        }
     }
 
-    public boolean isConnected() {
-        return serialPort.isOpened();
+    public boolean isConnected() throws Exception {
+        return getSerialPort().isOpened();
     }
 
     public void setParams(StringParams params) throws Exception {
         this.params = params;
-        prepareParams();
     }
 
     public StringParams getParams() {
-        return this.params;
+        return params;
     }
 
     public void setParam(String name, String value) {
         logger.debug("setParam(" + name + ": " + value + ")");
-        this.params.setValue(name, value);
+        params.set(name, value);
     }
 
     public String getParam(String name) {
         logger.debug("getParam(" + name + ")");
-        return params.getValue(name);
+        return params.get(name);
     }
 
-    protected void prepareParams() throws Exception 
-    {
-        logger.debug("prepareParams()");
-
-        if (this.params == null) {
-            throw new DeviceError(IDevice.ERROR_PARAMS, IDevice.TEXT_ERROR_PARAMS);
+    public SerialPort getSerialPort() throws Exception {
+        if (serialPort == null) {
+            serialPort = createSerialPort();
         }
-
-        StringParams.Value value;
-        int dataBits, stopBits, parity;
-
-        value = this.params.get(IDevice.PARAM_DATABITS);
-        if (value == null) {
-            throw new DeviceError(IDevice.ERROR_PARAMS, IDevice.TEXT_ERROR_PARAMS);
-        }
-        dataBits = Integer.parseInt(value.getValue());
-        logger.debug("dataBits '" + String.valueOf(dataBits) + "'");
-
-        value = this.params.get(IDevice.PARAM_STOPBITS);
-        if (value == null) {
-            throw new DeviceError(IDevice.ERROR_PARAMS, IDevice.TEXT_ERROR_PARAMS);
-        }
-        stopBits = Integer.parseInt(value.getValue());
-        logger.debug("stopBits '" + String.valueOf(stopBits) + "'");
-
-        value = this.params.get(IDevice.PARAM_PARITY);
-        if (value == null) {
-            throw new DeviceError(IDevice.ERROR_PARAMS, IDevice.TEXT_ERROR_PARAMS);
-        }
-        parity = Integer.parseInt(value.getValue());
-
-        String appName = "Unknown Application";
-        value = this.params.get(IDevice.PARAM_APPNAME);
-        if (value != null) {
-            appName = value.getValue();
-        }
-
-        int openTimeout = 1000;
-        value = this.params.get(IDevice.PARAM_OPEN_TIMEOUT);
-        if (value != null) {
-            openTimeout = Integer.parseInt(value.getValue());
-        }
-        logger.debug("parity '" + String.valueOf(parity) + "'");
-
-        serialPort.setSerialParams(appName, portName, baudRate, dataBits,
-                stopBits, parity, openTimeout);
-        logger.debug("prepareParams: OK");
+        return serialPort;
     }
 
-    public void zero() throws Exception{
+    private SerialPort createSerialPort() throws Exception {
+        logger.debug("createSerialPort()");
+
+        int portType = params.getInt(IDevice.PARAM_PORTTYPE);
+        if (portType == IDevice.PARAM_PORTTYPE_SERIAL) {
+            GnuSerialPort port = new GnuSerialPort();
+            port.portName = params.get(IDevice.PARAM_PORTNAME);
+            port.baudRate = params.getInt(IDevice.PARAM_BAUDRATE, 9600);
+            port.dataBits = params.getInt(IDevice.PARAM_DATABITS, gnu.io.SerialPort.DATABITS_8);
+            port.stopBits = params.getInt(IDevice.PARAM_STOPBITS, gnu.io.SerialPort.STOPBITS_1);
+            port.parity = params.getInt(IDevice.PARAM_PARITY, gnu.io.SerialPort.PARITY_NONE);
+            port.appName = params.get(IDevice.PARAM_APPNAME, "");
+            port.openTimeout = params.getInt(IDevice.PARAM_OPEN_TIMEOUT, 1000);
+            return port;
+        } else {
+            TcpSocketPort port = new TcpSocketPort();
+            port.portName = params.get(IDevice.PARAM_PORTNAME);
+            port.openTimeout = params.getInt(IDevice.PARAM_OPEN_TIMEOUT, 1000);
+            port.readTimeout = params.getInt(IDevice.PARAM_READ_TIMEOUT, 1000);
+            return port;
+        }
+    }
+
+    public void zero() throws Exception {
     }
 
     public void tara() throws Exception {
     }
 
-    public void tara(long v) throws Exception{
+    public void tara(long v) throws Exception {
     }
 
-    public DeviceMetrics getDeviceMetrics() throws Exception{
+    public DeviceMetrics getDeviceMetrics() throws Exception {
         return null;
     }
 
-    public ScaleWeight getWeight() throws Exception{
+    public ScaleWeight getWeight() throws Exception {
         return null;
     }
 

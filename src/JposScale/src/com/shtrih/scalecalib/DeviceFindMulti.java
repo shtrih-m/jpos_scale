@@ -4,7 +4,7 @@ import java.util.Vector;
 
 import com.shtrih.IDevice;
 import com.shtrih.scale.Pos2Serial;
-import com.shtrih.serialport.SerialPort;
+import com.shtrih.port.GnuSerialPort;
 import org.apache.log4j.Logger;
 
 // Multithread device find 
@@ -110,14 +110,13 @@ public class DeviceFindMulti {
             int resultCode = 0;
             Pos2Serial device = new Pos2Serial();
             try {
-                device.setPortName(portName);
-                device.setBaudRate(baudRate);
+                device.setParam(IDevice.PARAM_PORTNAME, portName);
+                device.setParam(IDevice.PARAM_BAUDRATE, String.valueOf(baudRate));
                 device.setParam(IDevice.PARAM_DATABITS, "8");
                 device.setParam(IDevice.PARAM_STOPBITS, "1");
                 device.setParam(IDevice.PARAM_PARITY, "0");
                 device.setParam(IDevice.PARAM_APPNAME, "Программа градуировки");
-                device.setParam(IDevice.PARAM_OPEN_TIMEOUT,
-                        String.valueOf(timeout));
+                device.setParam(IDevice.PARAM_OPEN_TIMEOUT, String.valueOf(timeout));
 
                 try {
                     device.connect();
@@ -169,7 +168,7 @@ public class DeviceFindMulti {
 
     public void updateItems() throws Exception{
         stop();
-        Vector ports = SerialPort.getPortList();
+        Vector ports = GnuSerialPort.getPortList();
         items.clear();
         for (int i = 0; i < ports.size(); i++) {
             DeviceItem item = new DeviceItem((String) ports.get(i));

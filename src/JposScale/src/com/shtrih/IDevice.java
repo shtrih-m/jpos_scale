@@ -7,18 +7,24 @@ public interface IDevice {
     public static final String S_UNKNOWN_DEVICE = "Неизвестное устройство";
 
     //Параметры
-    //public static final String PARAM_PORT = "Порт"; 
-    //public static final String PARAM_BAUDRATE = "Скорость"; 
-    public static final String PARAM_DATABITS = "БитДанных";
-    public static final String PARAM_STOPBITS = "СтопБит";
-    public static final String PARAM_PARITY = "Четность";
-    public static final String PARAM_IP = "Адрес";
-    public static final String PARAM_PASSWORD = "Пароль";
-    public static final String PARAM_PREFIX = "Префикс";
-    public static final String PARAM_SUFFIX = "Суффикс";
-    public static final String PARAM_APPNAME = "ApplicationName";
+    public static final String PARAM_PORTTYPE = "PortType"; 
+    public static final String PARAM_PORTNAME = "PortName"; 
+    public static final String PARAM_BAUDRATE = "BaudRate"; 
+    public static final String PARAM_DATABITS = "DataBits";
+    public static final String PARAM_STOPBITS = "StopBits";
+    public static final String PARAM_PARITY = "Parity";
+    public static final String PARAM_IPADDRESS = "IPAddress";
+    public static final String PARAM_PASSWORD = "Password";
+    public static final String PARAM_PREFIX = "Prefix";
+    public static final String PARAM_SUFFIX = "Suffix";
+    public static final String PARAM_APPNAME = "AppName";
     public static final String PARAM_OPEN_TIMEOUT = "OpenTimeout";
+    public static final String PARAM_READ_TIMEOUT = "ReadTimeout";
 
+    // PortType constants
+    public static final int PARAM_PORTTYPE_SERIAL = 0;
+    public static final int PARAM_PORTTYPE_SOCKET = 1;
+            
     //ОБЩИЕ ОШИБКИ в диапазоне [0 - 999]
     public static final int ERROR_OK = 0; //Нет ошибок
     public static final int ERROR_PARAMS = -4; //Ошибка во входных параметрах (не во входных параметрах команд, если реализован некий протокол)
@@ -44,9 +50,9 @@ public interface IDevice {
     //ОШИБКИ ДИСПЛЕЯ ПОКУПАТЕЛЯ в диапазоне [4000 - 4999]
     public abstract void connect() throws Exception;
 
-    public abstract void disconnect();
+    public abstract void disconnect() throws Exception;
 
-    public abstract boolean isConnected();
+    public abstract boolean isConnected() throws Exception;
 
     public abstract void setParams(StringParams params) throws Exception;
 

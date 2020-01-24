@@ -8,7 +8,7 @@ import com.shtrih.jpos.JposPropertyReader;
 import com.shtrih.IDevice;
 import com.shtrih.DeviceError;
 import com.shtrih.scale.DeviceMetrics;
-import com.shtrih.serialport.SerialPort;
+import com.shtrih.port.GnuSerialPort;
 import com.shtrih.scale.EScale;
 import com.shtrih.scale.IScale;
 import com.shtrih.scale.Pos2Serial;
@@ -17,11 +17,13 @@ import com.shtrih.scale.ScaleWeight;
 import com.shtrih.scale.Shtrih5Serial;
 import com.shtrih.scale.Shtrih6Serial;
 import com.shtrih.tools.Tools;
+import com.shtrih.tools.StringParams;
 import com.shtrih.jpos.JposUtils;
 
 import jpos.JposConst;
 import static jpos.JposConst.JPOS_EL_INPUT;
 import static jpos.JposConst.JPOS_ER_RETRY;
+import static jpos.JposConst.JPOS_E_FAILURE;
 import static jpos.JposConst.JPOS_E_TIMEOUT;
 import jpos.JposException;
 import jpos.ScaleConst;
@@ -164,98 +166,66 @@ public class ScaleService extends Scale implements ScaleService113, ScaleConst, 
         m_asyncMode = false;
         m_needReadWeight = false;
 
-        if (m_jposEntry != null) {
-            JposPropertyReader reader = new JposPropertyReader(m_jposEntry);
-            String s;
+        JposPropertyReader reader = new JposPropertyReader(m_jposEntry);
+        try {
+            String protocol = reader.readString("protocol").toLowerCase();
+            m_protocol = createProtocol(protocol);
 
-            try {
-                s = reader.readString("protocol", "").toLowerCase();
-                logger.debug("protocol '" + s + "'");
-            } catch (Exception e) {
-                logger.fatal("ошибка получения версии протокола 'protocol' :" + e.toString());
-                throw new JposException(JPOS_E_FAILURE, "Ошибка получения значения 'protocol'", e);
-            }
+            StringParams params = new StringParams();
+            params.set(IDevice.PARAM_DATABITS, "8");
+            params.set(IDevice.PARAM_STOPBITS, "1");
+            params.set(IDevice.PARAM_PARITY, "0");
 
-            if (s.compareTo("pos2") == 0) {
-                try {
-                    m_protocol = new Pos2Serial();
-                } catch (Exception e) {
-                    logger.fatal("ошибка инициализации 'protocol' : " + e.toString());
-                    throw new JposException(JPOS_E_FAILURE, "Ошибка инициализации протокола POS2", e);
-                }
-            } else if (s.compareTo("shtrih5") == 0) {
-                try {
-                    m_protocol = new Shtrih5Serial();
-                } catch (Exception e) {
-                    logger.fatal("ошибка инициализации 'shtrih5' : " + e.toString());
-                    throw new JposException(JPOS_E_FAILURE, "Ошибка инициализации протокола ШТРИХ5", e);
-                }
-            } else if (s.compareTo("shtrih6") == 0) {
-                try {
-                    m_protocol = new Shtrih6Serial();
-                } catch (Exception e) {
-                    logger.fatal("ошибка инициализации 'shtrih6' : " + e.toString());
-                    throw new JposException(JPOS_E_FAILURE, "Ошибка инициализации протокола ШТРИХ6", e);
-                }
-            } else {
-                logger.fatal("неизвестный протокол весов - '" + s + "'");
-                throw new JposException(JPOS_E_FAILURE, "Неизвестный протокол весов '" + s + "'");
-            }
+            String value = reader.readString(RS232Const.RS232_PORT_NAME_PROP_NAME, "");
+            params.set(IDevice.PARAM_PORTNAME, value);
 
-            try {
-                s = reader.readString(RS232Const.RS232_PORT_NAME_PROP_NAME, "");
-                m_protocol.setPortName(s);
+            value = reader.readString(RS232Const.RS232_BAUD_RATE_PROP_NAME, "9600");
+            params.set(IDevice.PARAM_BAUDRATE, value);
 
-            } catch (Exception e) {
-                logger.fatal("ошибка получения значения 'portName'. " + e.toString());
-                throw new JposException(JPOS_E_FAILURE, "Ошибка получения значения 'portName'", e);
-            }
+            value = reader.readString("password", "30");
+            params.set(IDevice.PARAM_PASSWORD, value);
 
-            try {
-                s = reader.readString(RS232Const.RS232_BAUD_RATE_PROP_NAME, "4800");
-                m_protocol.setBaudRate(Integer.parseInt(s));
-            } catch (Exception e) {
-                logger.fatal("ошибка получения значения 'baudRate'. " + e.toString());
-                throw new JposException(JPOS_E_FAILURE, "Ошибка получения значения 'baudRate'", e);
-            }
+            value = reader.readString("timeout", "100");
+            params.set(IDevice.PARAM_OPEN_TIMEOUT, value);
 
-            try {
-                s = reader.readString("password", "30");
-                logger.debug("password '" + s + "'");
-                m_protocol.setParam(IDevice.PARAM_PASSWORD, s);
-            } catch (Exception e) {
-                logger.fatal("ошибка получения значения 'password'. " + e.toString());
-                throw new JposException(JPOS_E_FAILURE, "Ошибка получения значения 'password'", e);
-            }
+            value = reader.readString("portType", "0");
+            params.set(IDevice.PARAM_PORTTYPE, value);
+            
+            m_protocol.setParams(params);
+            m_state = S_OPENED;
+            logger.debug("open: OK");
+        } catch (Exception e) {
+            throw getJposException(e);
+        }
+    }
 
-            m_protocol.setParam(IDevice.PARAM_DATABITS, "8");
-            m_protocol.setParam(IDevice.PARAM_STOPBITS, "1");
-            m_protocol.setParam(IDevice.PARAM_PARITY, "0");
-
-            try {
-                s = reader.readString("timeout", "100");
-                logger.debug("timeout '" + s + "'");
-                m_protocol.setParam(IDevice.PARAM_OPEN_TIMEOUT, String.valueOf(s));
-            } catch (Exception e) {
-                logger.fatal("ошибка получения значения 'timeout'. " + e.toString());
-                throw new JposException(JPOS_E_FAILURE, "Ошибка получения значения 'timeout'", e);
-            }
-
-        } // else logger.error("open(...). m_jposEntry == null");
-
-        m_state = S_OPENED;
-        logger.debug("open: OK");
+    private ScaleSerial createProtocol(String protocol) throws Exception {
+        if (protocol.equalsIgnoreCase("pos2")) {
+            return new Pos2Serial();
+        }
+        if (protocol.equalsIgnoreCase("shtrih5")) {
+            return new Shtrih5Serial();
+        }
+        if (protocol.equalsIgnoreCase(
+                "shtrih6")) {
+            return new Shtrih6Serial();
+        }
+        throw new JposException(JPOS_E_FAILURE, "Неизвестный протокол весов '" + protocol + "'");
     }
 
     public void release() throws JposException {
         logger.debug("release()");
         checkClaimed();
-        m_protocol.disconnect();
-        m_state = S_OPENED;
-        synchronized (m_events) {
-            m_events.clear();
+        try{
+            m_protocol.disconnect();
+            m_state = S_OPENED;
+            synchronized (m_events) {
+                m_events.clear();
+            }
+            logger.debug("release: OK");
+        } catch(Exception e){
+            throw getJposException(e);
         }
-        logger.debug("release: OK");
     }
 
     public void claim(int timeout) throws JposException {
@@ -726,6 +696,7 @@ public class ScaleService extends Scale implements ScaleService113, ScaleConst, 
         if (m_state < S_OPENED) {
             logger.debug("checkOpened() JPOS_E_CLOSED");
             throw new JposException(JPOS_E_CLOSED);
+
         }
     }
 
@@ -793,8 +764,7 @@ public class ScaleService extends Scale implements ScaleService113, ScaleConst, 
         }
     }
 
-    private JposException getJposException(Exception e) 
-    {
+    private JposException getJposException(Exception e) {
         logger.error(e);
         if (e instanceof java.io.IOException) {
             return new JposException(JposConst.JPOS_E_TIMEOUT, e.getMessage());
@@ -805,15 +775,15 @@ public class ScaleService extends Scale implements ScaleService113, ScaleConst, 
         }
 
         if (e instanceof gnu.io.NoSuchPortException) {
-            return new JposException(JposConst.JPOS_E_FAILURE, SerialPort.TEXT_ERROR_NOTSUCHPORT);
+            return new JposException(JposConst.JPOS_E_FAILURE, GnuSerialPort.TEXT_ERROR_NOTSUCHPORT);
         }
 
         if (e instanceof gnu.io.PortInUseException) {
-            return new JposException(JposConst.JPOS_E_FAILURE, SerialPort.TEXT_ERROR_INUSE);
+            return new JposException(JposConst.JPOS_E_FAILURE, GnuSerialPort.TEXT_ERROR_INUSE);
         }
 
         if (e instanceof gnu.io.UnsupportedCommOperationException) {
-            return new JposException(JposConst.JPOS_E_FAILURE, SerialPort.TEXT_ERROR_UNSUPPORT);
+            return new JposException(JposConst.JPOS_E_FAILURE, GnuSerialPort.TEXT_ERROR_UNSUPPORT);
         }
         return new JposException(JposConst.JPOS_E_FAILURE, e.getMessage());
     }

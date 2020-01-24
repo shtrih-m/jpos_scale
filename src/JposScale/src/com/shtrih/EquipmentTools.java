@@ -1,7 +1,7 @@
 package com.shtrih;
 
 import com.shtrih.tools.Tools;
-import com.shtrih.serialport.SerialPort;
+import com.shtrih.port.GnuSerialPort;
 
 public class EquipmentTools {
 	public static int convertDecToBCD(int dec) {
@@ -90,12 +90,12 @@ public class EquipmentTools {
 	
 	public static int parseSerialPortError(int e) {
 		switch (e) {
-		case SerialPort.ERROR_UNKNOWN: return IDevice.ERROR_UNKNOWN; 
-		case SerialPort.ERROR_PORTINUSE: return IDevice.ERROR_BUSY;
-		case SerialPort.ERROR_NOSUCHPORT: return IDevice.ERROR_PARAMS;
-		case SerialPort.ERROR_IO:return IDevice.ERROR_LL;
-		case SerialPort.ERROR_UNSUPPORT: return IDevice.ERROR_UNSUPPORT;
-		case SerialPort.ERROR_TIMEOUT: return IDevice.ERROR_NOLINK;
+		case GnuSerialPort.ERROR_UNKNOWN: return IDevice.ERROR_UNKNOWN; 
+		case GnuSerialPort.ERROR_PORTINUSE: return IDevice.ERROR_BUSY;
+		case GnuSerialPort.ERROR_NOSUCHPORT: return IDevice.ERROR_PARAMS;
+		case GnuSerialPort.ERROR_IO:return IDevice.ERROR_LL;
+		case GnuSerialPort.ERROR_UNSUPPORT: return IDevice.ERROR_UNSUPPORT;
+		case GnuSerialPort.ERROR_TIMEOUT: return IDevice.ERROR_NOLINK;
 		}
 		return IDevice.ERROR_UNKNOWN;
 	}
