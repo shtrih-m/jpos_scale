@@ -1,24 +1,23 @@
-package com.shtrih.scalecalib;
+package com.shtrih.scale;
 
 import java.util.Vector;
 
 import com.shtrih.IDevice;
-import com.shtrih.scale.Pos2Serial;
+import com.shtrih.tools.StringParams;
 import com.shtrih.port.GnuSerialPort;
 import org.apache.log4j.Logger;
 
-// Multithread device find 
-// Not working, because RXTX 2.1.7r2 is not thread safe
-public class DeviceFindMulti {
+// Single thread device find
+public class DeviceFindSingle implements Runnable {
 
+    private Thread thread;
     private int timeout = 100;
     private boolean started = false;
     private Vector items = new Vector();
     private final SmScale driver = SmScale.instance;
-    private final Logger logger = Logger.getLogger(DeviceFindMulti.class);
-    private int startedCount = 0;
+    private final Logger logger = Logger.getLogger(DeviceFindSingle.class);
 
-    public DeviceFindMulti() {
+    public DeviceFindSingle() {
     }
 
     public void setTimeout(int value) {
@@ -33,13 +32,11 @@ public class DeviceFindMulti {
         return (DeviceItem) items.get(index);
     }
 
-    public class DeviceItem implements Runnable {
+    public class DeviceItem {
 
         private String text;
         private int baudRate;
         private boolean found;
-        private Thread thread;
-        private boolean started;
         private final String portName;
 
         public DeviceItem(String portName) {
@@ -72,24 +69,7 @@ public class DeviceFindMulti {
             found = false;
         }
 
-        public boolean isStarted() {
-            return started;
-        }
-
-        public void start() {
-            if (thread == null) {
-                reset();
-                started = true;
-                thread = new Thread(this);
-                thread.start();
-            }
-        }
-
-        public void stop() {
-            thread = null;
-        }
-
-        public void run() {
+        public void searchDevice() {
             text = "идет поиск...";
             int[] baudRates = {2400, 4800, 9600, 19200, 38400, 57600, 115200};
             for (int i = 0; i < baudRates.length; i++) {
@@ -102,7 +82,6 @@ public class DeviceFindMulti {
                     break;
                 }
             }
-            started = false;
         }
 
         public int findDevice() {
@@ -110,23 +89,21 @@ public class DeviceFindMulti {
             int resultCode = 0;
             Pos2Serial device = new Pos2Serial();
             try {
-                device.setParam(IDevice.PARAM_PORTNAME, portName);
-                device.setParam(IDevice.PARAM_BAUDRATE, String.valueOf(baudRate));
-                device.setParam(IDevice.PARAM_DATABITS, "8");
-                device.setParam(IDevice.PARAM_STOPBITS, "1");
-                device.setParam(IDevice.PARAM_PARITY, "0");
-                device.setParam(IDevice.PARAM_APPNAME, "Программа градуировки");
-                device.setParam(IDevice.PARAM_OPEN_TIMEOUT, String.valueOf(timeout));
+                StringParams params = new StringParams();
+                params.set(IDevice.PARAM_PORTNAME, portName);
+                params.set(IDevice.PARAM_BAUDRATE, String.valueOf(baudRate));
+                params.set(IDevice.PARAM_DATABITS, "8");
+                params.set(IDevice.PARAM_STOPBITS, "1");
+                params.set(IDevice.PARAM_PARITY, "0");
+                params.set(IDevice.PARAM_APPNAME, "Программа градуировки");
+                params.set(IDevice.PARAM_OPEN_TIMEOUT, String.valueOf(timeout));
+                device.setParams(params);
 
-                try {
-                    device.connect();
-                    device.readDeviceMetrics();
-                    text = device.getDeviceMetrics().getDescription();
-                    return IDevice.ERROR_NONE;
-                } catch (Exception e) {
-                    text = String.format("Ошибка: %s", e.getMessage());
-                    //resultCode = device.getResultCode();
-                }
+                device.connect();
+                device.readDeviceMetrics();
+            } catch (Exception e) {
+                text = String.format("Ошибка: %s", e.getMessage());
+                //resultCode = device.getResultCode(); !!!
             } finally {
                 device.disconnect();
             }
@@ -134,39 +111,30 @@ public class DeviceFindMulti {
         }
     }
 
-    public void start() throws Exception {
-        if (!isStarted()) {
+    public void start() throws Exception{
+        if (thread == null) {
             driver.disconnect();
+
             for (int i = 0; i < items.size(); i++) {
                 DeviceItem item = (DeviceItem) items.get(i);
-                item.start();
+                item.reset();
             }
+
+            started = true;
+            thread = new Thread(this);
+            thread.start();
         }
     }
 
-    public void stop() throws Exception{
-        if (!isStarted()) {
-            driver.disconnect();
-            for (int i = 0; i < items.size(); i++) {
-                DeviceItem item = (DeviceItem) items.get(i);
-                item.stop();
-            }
-        }
+    public void stop() {
+        thread = null;
     }
 
     public boolean isStarted() {
-        boolean started = false;
-        for (int i = 0; i < items.size(); i++) {
-            DeviceItem item = (DeviceItem) items.get(i);
-            started = item.isStarted();
-            if (started) {
-                break;
-            }
-        }
         return started;
     }
 
-    public void updateItems() throws Exception{
+    public void updateItems() {
         stop();
         Vector ports = GnuSerialPort.getPortList();
         items.clear();
@@ -174,6 +142,24 @@ public class DeviceFindMulti {
             DeviceItem item = new DeviceItem((String) ports.get(i));
             items.add(item);
         }
+    }
+
+    public void run() {
+        logger.debug("run");
+        try {
+            for (int i = 0; i < items.size(); i++) {
+                if (thread == null) {
+                    break;
+                }
+                DeviceItem item = (DeviceItem) items.get(i);
+                item.searchDevice();
+            }
+        } catch (Exception e) {
+            logger.error("Search failed: " + e);
+
+        }
+        thread = null;
+        started = false;
     }
 
 }

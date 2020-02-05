@@ -18,6 +18,8 @@
         <product description="Scale service" name="Scale" url="http://www.javapos.com"/>
 		
         <!--<prop name="portName" type="String" value="COM3"/>-->
+        <!--<prop name="portName" type="String" value="10.11.7.129:51234"/>-->
+		
         <!-- Port type: 0- serial, 1- TCP -->
         <prop name="portType" type="String" value="1"/>
         <prop name="portName" type="String" value="10.11.7.129:51234"/>

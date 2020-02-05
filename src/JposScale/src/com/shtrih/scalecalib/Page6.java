@@ -9,6 +9,8 @@ import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 
 import com.shtrih.scale.CalibrationStatus;
+import com.shtrih.scale.Page;
+import com.shtrih.scale.SmScale;
 
 public class Page6 extends Page {
 

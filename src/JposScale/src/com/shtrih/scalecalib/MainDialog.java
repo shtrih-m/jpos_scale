@@ -24,7 +24,9 @@ import org.eclipse.wb.swing.FocusTraversalOnArray;
 
 import com.shtrih.DeviceError;
 import com.shtrih.scale.IScale;
+import com.shtrih.scale.Page;
 import com.shtrih.scale.Pos2Serial;
+import com.shtrih.scale.SmScale;
 import com.shtrih.scale.CalibrationStatus;
 
 public class MainDialog extends JDialog {

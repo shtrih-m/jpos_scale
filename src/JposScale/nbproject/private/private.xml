@@ -3,11 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/projects/JposScale/src/JposScale/src/com/shtrih/scalecalib/FindDlg.java</file>
+            <file>file:/C:/projects/JposScale/src/JposScale/src/com/shtrih/scale/Pos2Serial.java</file>
+            <file>file:/C:/projects/JposScale/src/JposScale/src/com/shtrih/scalecalib/PasswordDialog.java</file>
+            <file>file:/C:/projects/JposScale/src/JposScale/src/com/shtrih/scalecalib/DeviceFindMulti.java</file>
             <file>file:/C:/projects/JposScale/src/JposScale/src/com/shtrih/port/GnuSerialPort.java</file>
-            <file>file:/C:/projects/JposScale/src/JposScale/src/com/shtrih/port/SerialPort.java</file>
+            <file>file:/C:/projects/JposScale/src/JposScale/src/com/shtrih/scale/ScaleCommand.java</file>
+            <file>file:/C:/projects/JposScale/src/JposScale/src/com/shtrih/scalecalib/DeviceFindSingle.java</file>
             <file>file:/C:/projects/JposScale/src/JposScale/src/com/shtrih/port/TcpSocketPort.java</file>
+            <file>file:/C:/projects/JposScale/src/JposScale/src/com/shtrih/scalecalib/MainDialog.java</file>
             <file>file:/C:/projects/JposScale/src/JposScale/src/com/shtrih/ShtrihMProtocolSerial.java</file>
-            <file>file:/C:/projects/JposScale/src/JposScale/src/com/shtrih/scalecalib/SmScale.java</file>
             <file>file:/C:/projects/JposScale/src/JposScale/src/com/shtrih/scale/ScaleSerial.java</file>
         </group>
     </open-files>

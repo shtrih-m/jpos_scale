@@ -5,6 +5,10 @@ import java.awt.Color;
 import javax.swing.JLabel;
 import javax.swing.BorderFactory;
 import javax.swing.border.Border;
+
+import com.shtrih.scale.Page;
+import com.shtrih.scale.SmScale;
+
 import javax.swing.SwingConstants;
 
 public class Page3 extends Page 

@@ -49,7 +49,7 @@ public class ScaleTests implements DataListener {
                 } catch (Exception e) {
                     System.out.println("ERROR: " + e.getMessage());
                 }
-                Thread.sleep(100);
+                //Thread.sleep(100);
             }
             //scale.setDeviceEnabled(false);
             //scale.release();

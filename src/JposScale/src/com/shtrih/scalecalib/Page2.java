@@ -16,6 +16,9 @@ import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 
+import com.shtrih.scale.Page;
+import com.shtrih.scale.SmScale;
+
 public class Page2 extends Page {
 
     private JList lbChannels;

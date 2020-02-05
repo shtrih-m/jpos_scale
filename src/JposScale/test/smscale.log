@@ -1,360 +1,749 @@
-2020-01-24 15:04:09,435 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - open(Scale, jpos.Scale$ScaleCallbacks@7c53a9eb)
-2020-01-24 15:04:09,435 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - open: OK
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getDeviceServiceVersion()
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getDeviceServiceVersion = 1013001
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapCompareFirmwareVersion()
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapCompareFirmwareVersion = false
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapDisplay()
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapDisplay = false
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapDisplayText()
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapDisplayText = false
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapPowerReporting()
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapPowerReporting = JPOS_PR_NONE
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapPriceCalculating()
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapPriceCalculating = false
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapStatisticsReporting()
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapStatisticsReporting = false
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapStatusUpdate()
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapStatusUpdate = false
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapTareWeight()
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapTareWeight = true
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapUpdateFirmware()
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapUpdateFirmware = false
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapUpdateStatistics()
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapUpdateStatistics = false
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapZeroScale()
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapZeroScale = true
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - claim(1000)
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.scale.ScaleSerial - setParam(Таймаут_ТипУстройства: 1000)
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.scale.ScaleSerial - createSerialPort()
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.scale.ScaleSerial - openPort()
-2020-01-24 15:04:09,445 [     10] [main]  DEBUG - com.shtrih.port.TcpSocketPort - open(10.11.7.129:51234)
-2020-01-24 15:04:10,455 [   1020] [main]  ERROR - com.shtrih.jpos.scale.ScaleService - java.net.SocketTimeoutException: connect timed out
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - open(Scale, jpos.Scale$ScaleCallbacks@7c53a9eb)
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - open: OK
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getDeviceServiceVersion()
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getDeviceServiceVersion = 1013001
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapCompareFirmwareVersion()
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapCompareFirmwareVersion = false
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapDisplay()
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapDisplay = false
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapDisplayText()
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapDisplayText = false
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapPowerReporting()
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapPowerReporting = JPOS_PR_NONE
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapPriceCalculating()
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapPriceCalculating = false
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapStatisticsReporting()
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapStatisticsReporting = false
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapStatusUpdate()
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapStatusUpdate = false
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapTareWeight()
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapTareWeight = true
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapUpdateFirmware()
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapUpdateFirmware = false
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapUpdateStatistics()
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapUpdateStatistics = false
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapZeroScale()
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapZeroScale = true
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - claim(1000)
-2020-01-24 15:04:22,828 [      0] [main]  DEBUG - com.shtrih.scale.ScaleSerial - setParam(Таймаут_ТипУстройства: 1000)
-2020-01-24 15:04:22,838 [     10] [main]  DEBUG - com.shtrih.scale.ScaleSerial - createSerialPort()
-2020-01-24 15:04:22,838 [     10] [main]  DEBUG - com.shtrih.scale.ScaleSerial - openPort()
-2020-01-24 15:04:22,838 [     10] [main]  DEBUG - com.shtrih.port.TcpSocketPort - open(10.11.7.129:51234)
-2020-01-24 15:04:22,858 [     30] [main]  DEBUG - com.shtrih.port.TcpSocketPort - OK
-2020-01-24 15:04:22,858 [     30] [main]  DEBUG - com.shtrih.scale.ScaleSerial - openPort: OK
-2020-01-24 15:04:22,858 [     30] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - claim: OK
-2020-01-24 15:04:22,858 [     30] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - setDeviceEnabled(true)
-2020-01-24 15:04:22,858 [     30] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - setDeviceEnabled: OK
-2020-01-24 15:04:22,858 [     30] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - setAsyncMode(false)
-2020-01-24 15:04:22,858 [     30] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:22,858 [     30] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:22,858 [     30] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:22,858 [     30] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:23,188 [    360] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:23,188 [    360] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1524, tare = 0, flags = 21
-2020-01-24 15:04:23,188 [    360] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1524, tareWeight = 0
-2020-01-24 15:04:23,188 [    360] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:23,298 [    470] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:23,298 [    470] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:23,298 [    470] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:23,298 [    470] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:23,488 [    660] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:23,488 [    660] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1524, tare = 0, flags = 21
-2020-01-24 15:04:23,488 [    660] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1524, tareWeight = 0
-2020-01-24 15:04:23,488 [    660] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:23,588 [    760] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:23,588 [    760] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:23,588 [    760] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:23,588 [    760] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:23,788 [    960] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:23,788 [    960] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1524, tare = 0, flags = 21
-2020-01-24 15:04:23,788 [    960] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1524, tareWeight = 0
-2020-01-24 15:04:23,788 [    960] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:23,888 [   1060] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:23,888 [   1060] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:23,888 [   1060] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:23,888 [   1060] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:24,088 [   1260] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:24,088 [   1260] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1524, tare = 0, flags = 21
-2020-01-24 15:04:24,088 [   1260] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1524, tareWeight = 0
-2020-01-24 15:04:24,088 [   1260] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:24,188 [   1360] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:24,188 [   1360] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:24,188 [   1360] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:24,188 [   1360] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:24,418 [   1590] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:24,418 [   1590] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1524, tare = 0, flags = 21
-2020-01-24 15:04:24,418 [   1590] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1524, tareWeight = 0
-2020-01-24 15:04:24,418 [   1590] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:24,518 [   1690] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:24,518 [   1690] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:24,518 [   1690] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:24,518 [   1690] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:24,698 [   1870] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:24,698 [   1870] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1524, tare = 0, flags = 21
-2020-01-24 15:04:24,698 [   1870] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1524, tareWeight = 0
-2020-01-24 15:04:24,698 [   1870] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:24,798 [   1970] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:24,798 [   1970] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:24,798 [   1970] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:24,798 [   1970] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:25,028 [   2200] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:25,028 [   2200] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1524, tare = 0, flags = 21
-2020-01-24 15:04:25,028 [   2200] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1524, tareWeight = 0
-2020-01-24 15:04:25,028 [   2200] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:25,128 [   2300] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:25,128 [   2300] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:25,128 [   2300] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:25,128 [   2300] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:25,308 [   2480] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:25,308 [   2480] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1524, tare = 0, flags = 21
-2020-01-24 15:04:25,308 [   2480] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1524, tareWeight = 0
-2020-01-24 15:04:25,308 [   2480] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:25,418 [   2590] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:25,418 [   2590] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:25,418 [   2590] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:25,418 [   2590] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:25,738 [   2910] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:25,738 [   2910] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1524, tare = 0, flags = 21
-2020-01-24 15:04:25,738 [   2910] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1524, tareWeight = 0
-2020-01-24 15:04:25,738 [   2910] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:25,838 [   3010] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:25,838 [   3010] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:25,838 [   3010] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:25,838 [   3010] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:26,128 [   3300] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:26,138 [   3310] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1524, tare = 0, flags = 21
-2020-01-24 15:04:26,138 [   3310] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1524, tareWeight = 0
-2020-01-24 15:04:26,138 [   3310] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:26,238 [   3410] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:26,238 [   3410] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:26,238 [   3410] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:26,238 [   3410] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:26,748 [   3920] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:26,748 [   3920] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1524, tare = 0, flags = 21
-2020-01-24 15:04:26,748 [   3920] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1524, tareWeight = 0
-2020-01-24 15:04:26,748 [   3920] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:26,848 [   4020] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:26,848 [   4020] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:26,848 [   4020] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:26,848 [   4020] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:27,088 [   4260] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:27,088 [   4260] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1524, tare = 0, flags = 21
-2020-01-24 15:04:27,088 [   4260] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1524, tareWeight = 0
-2020-01-24 15:04:27,088 [   4260] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:27,188 [   4360] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:27,188 [   4360] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:27,188 [   4360] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:27,188 [   4360] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:27,388 [   4560] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:27,388 [   4560] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1524, tare = 0, flags = 21
-2020-01-24 15:04:27,388 [   4560] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1524, tareWeight = 0
-2020-01-24 15:04:27,388 [   4560] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:27,489 [   4661] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:27,489 [   4661] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:27,489 [   4661] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:27,489 [   4661] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:27,689 [   4861] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:27,689 [   4861] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1524, tare = 0, flags = 21
-2020-01-24 15:04:27,689 [   4861] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1524, tareWeight = 0
-2020-01-24 15:04:27,689 [   4861] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:27,789 [   4961] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:27,789 [   4961] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:27,789 [   4961] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:27,789 [   4961] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:27,989 [   5161] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:27,989 [   5161] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1524, tare = 0, flags = 21
-2020-01-24 15:04:27,989 [   5161] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1524, tareWeight = 0
-2020-01-24 15:04:27,989 [   5161] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:28,089 [   5261] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:28,089 [   5261] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:28,089 [   5261] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:28,089 [   5261] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:28,389 [   5561] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:28,389 [   5561] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1524, tare = 0, flags = 21
-2020-01-24 15:04:28,389 [   5561] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1524, tareWeight = 0
-2020-01-24 15:04:28,389 [   5561] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:28,489 [   5661] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:28,489 [   5661] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:28,489 [   5661] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:28,489 [   5661] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:29,599 [   6771] [main]  ERROR - com.shtrih.ShtrihMProtocolSerial - java.net.SocketTimeoutException: Read timed out
-2020-01-24 15:04:30,599 [   7771] [main]  ERROR - com.shtrih.ShtrihMProtocolSerial - java.net.SocketTimeoutException: Read timed out
-2020-01-24 15:04:31,599 [   8771] [main]  ERROR - com.shtrih.ShtrihMProtocolSerial - java.net.SocketTimeoutException: Read timed out
-2020-01-24 15:04:31,599 [   8771] [main]  ERROR - com.shtrih.jpos.scale.ScaleService - com.shtrih.DeviceError: Нет связи
-2020-01-24 15:04:31,699 [   8871] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:31,699 [   8871] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:31,699 [   8871] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:31,699 [   8871] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:32,699 [   9871] [main]  ERROR - com.shtrih.ShtrihMProtocolSerial - java.net.SocketTimeoutException: Read timed out
-2020-01-24 15:04:32,699 [   9871] [main]  ERROR - com.shtrih.jpos.scale.ScaleService - com.shtrih.DeviceError: Нет связи
-2020-01-24 15:04:32,799 [   9971] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:32,799 [   9971] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:32,799 [   9971] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:32,799 [   9971] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:33,799 [  10971] [main]  ERROR - com.shtrih.ShtrihMProtocolSerial - java.net.SocketTimeoutException: Read timed out
-2020-01-24 15:04:33,799 [  10971] [main]  ERROR - com.shtrih.jpos.scale.ScaleService - com.shtrih.DeviceError: Нет связи
-2020-01-24 15:04:33,899 [  11071] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:33,899 [  11071] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:33,899 [  11071] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:33,899 [  11071] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:34,899 [  12071] [main]  ERROR - com.shtrih.ShtrihMProtocolSerial - java.net.SocketTimeoutException: Read timed out
-2020-01-24 15:04:34,899 [  12071] [main]  ERROR - com.shtrih.jpos.scale.ScaleService - com.shtrih.DeviceError: Нет связи
-2020-01-24 15:04:34,999 [  12171] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:34,999 [  12171] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:34,999 [  12171] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:34,999 [  12171] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:35,999 [  13171] [main]  ERROR - com.shtrih.ShtrihMProtocolSerial - java.net.SocketTimeoutException: Read timed out
-2020-01-24 15:04:35,999 [  13171] [main]  ERROR - com.shtrih.jpos.scale.ScaleService - com.shtrih.DeviceError: Нет связи
-2020-01-24 15:04:36,099 [  13271] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:36,099 [  13271] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:36,099 [  13271] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:36,099 [  13271] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:37,099 [  14271] [main]  ERROR - com.shtrih.ShtrihMProtocolSerial - java.net.SocketTimeoutException: Read timed out
-2020-01-24 15:04:37,099 [  14271] [main]  ERROR - com.shtrih.jpos.scale.ScaleService - com.shtrih.DeviceError: Нет связи
-2020-01-24 15:04:37,199 [  14371] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:37,199 [  14371] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:37,199 [  14371] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:37,199 [  14371] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:38,199 [  15371] [main]  ERROR - com.shtrih.ShtrihMProtocolSerial - java.net.SocketTimeoutException: Read timed out
-2020-01-24 15:04:38,199 [  15371] [main]  ERROR - com.shtrih.jpos.scale.ScaleService - com.shtrih.DeviceError: Нет связи
-2020-01-24 15:04:38,299 [  15471] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:38,299 [  15471] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:38,299 [  15471] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:38,299 [  15471] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:38,759 [  15931] [main]  ERROR - com.shtrih.ShtrihMProtocolSerial - java.net.SocketException: Software caused connection abort: recv failed
-2020-01-24 15:04:38,759 [  15931] [main]  ERROR - com.shtrih.jpos.scale.ScaleService - com.shtrih.DeviceError: Нет связи
-2020-01-24 15:04:38,869 [  16041] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:38,869 [  16041] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:38,869 [  16041] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:38,869 [  16041] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:38,969 [  16141] [main]  DEBUG - com.shtrih.port.TcpSocketPort - open(10.11.7.129:51234)
-2020-01-24 15:04:38,969 [  16141] [main]  DEBUG - com.shtrih.port.TcpSocketPort - OK
-2020-01-24 15:04:39,069 [  16241] [main]  ERROR - com.shtrih.jpos.scale.ScaleService - java.net.SocketException: Socket closed
-2020-01-24 15:04:39,169 [  16341] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:39,169 [  16341] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:39,169 [  16341] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:39,169 [  16341] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:39,169 [  16341] [main]  DEBUG - com.shtrih.port.TcpSocketPort - open(10.11.7.129:51234)
-2020-01-24 15:04:39,169 [  16341] [main]  DEBUG - com.shtrih.port.TcpSocketPort - OK
-2020-01-24 15:04:39,339 [  16511] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:39,339 [  16511] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1088, tare = 0, flags = 4
-2020-01-24 15:04:39,350 [  16522] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:39,350 [  16522] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:39,350 [  16522] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:39,550 [  16722] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:39,550 [  16722] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1426, tare = 0, flags = 4
-2020-01-24 15:04:39,551 [  16723] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:39,551 [  16723] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:39,551 [  16723] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:39,761 [  16933] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:39,761 [  16933] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1496, tare = 0, flags = 4
-2020-01-24 15:04:39,762 [  16934] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:39,762 [  16934] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:39,762 [  16934] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:39,962 [  17134] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:39,962 [  17134] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1502, tare = 0, flags = 4
-2020-01-24 15:04:39,963 [  17135] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:39,963 [  17135] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:39,963 [  17135] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:40,263 [  17435] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:40,263 [  17435] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1502, tare = 0, flags = 21
-2020-01-24 15:04:40,263 [  17435] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1502, tareWeight = 0
-2020-01-24 15:04:40,263 [  17435] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:40,363 [  17535] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:40,363 [  17535] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:40,363 [  17535] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:40,363 [  17535] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:40,693 [  17865] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:40,693 [  17865] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1502, tare = 0, flags = 21
-2020-01-24 15:04:40,693 [  17865] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1502, tareWeight = 0
-2020-01-24 15:04:40,693 [  17865] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:40,803 [  17975] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:40,803 [  17975] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:40,803 [  17975] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:40,803 [  17975] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:41,203 [  18375] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:41,203 [  18375] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1502, tare = 0, flags = 21
-2020-01-24 15:04:41,203 [  18375] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1502, tareWeight = 0
-2020-01-24 15:04:41,203 [  18375] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:41,303 [  18475] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:41,303 [  18475] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:41,303 [  18475] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:41,303 [  18475] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:41,693 [  18865] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:41,693 [  18865] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1502, tare = 0, flags = 21
-2020-01-24 15:04:41,693 [  18865] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1502, tareWeight = 0
-2020-01-24 15:04:41,693 [  18865] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:41,793 [  18965] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:41,793 [  18965] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:41,793 [  18965] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:41,793 [  18965] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:42,043 [  19215] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:42,043 [  19215] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1502, tare = 0, flags = 21
-2020-01-24 15:04:42,043 [  19215] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1502, tareWeight = 0
-2020-01-24 15:04:42,043 [  19215] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:42,143 [  19315] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:42,143 [  19315] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:42,143 [  19315] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:42,143 [  19315] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:42,343 [  19515] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:42,343 [  19515] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1502, tare = 0, flags = 21
-2020-01-24 15:04:42,343 [  19515] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1502, tareWeight = 0
-2020-01-24 15:04:42,343 [  19515] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:42,443 [  19615] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:42,443 [  19615] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:42,443 [  19615] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:42,443 [  19615] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:42,643 [  19815] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:42,643 [  19815] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1502, tare = 0, flags = 21
-2020-01-24 15:04:42,643 [  19815] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1502, tareWeight = 0
-2020-01-24 15:04:42,643 [  19815] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:42,743 [  19915] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:42,743 [  19915] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:42,743 [  19915] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:42,743 [  19915] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:42,963 [  20135] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:42,963 [  20135] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1502, tare = 0, flags = 21
-2020-01-24 15:04:42,963 [  20135] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1502, tareWeight = 0
-2020-01-24 15:04:42,963 [  20135] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:43,063 [  20235] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:43,063 [  20235] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:43,063 [  20235] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:43,063 [  20235] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:43,283 [  20455] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:43,283 [  20455] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1502, tare = 0, flags = 21
-2020-01-24 15:04:43,283 [  20455] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1502, tareWeight = 0
-2020-01-24 15:04:43,283 [  20455] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:43,383 [  20555] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:43,383 [  20555] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:43,383 [  20555] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:43,383 [  20555] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
-2020-01-24 15:04:43,553 [  20725] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:43,553 [  20725] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1502, tare = 0, flags = 21
-2020-01-24 15:04:43,553 [  20725] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1502, tareWeight = 0
-2020-01-24 15:04:43,553 [  20725] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
-2020-01-24 15:04:43,653 [  20825] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@1f89ab83, 1000)
-2020-01-24 15:04:43,653 [  20825] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
-2020-01-24 15:04:43,653 [  20825] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
-2020-01-24 15:04:43,653 [  20825] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:40,276 [      1] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - open(Scale, jpos.Scale$ScaleCallbacks@2c13da15)
+2020-02-05 19:47:40,280 [      5] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - open: OK
+2020-02-05 19:47:40,280 [      5] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getDeviceServiceVersion()
+2020-02-05 19:47:40,280 [      5] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getDeviceServiceVersion = 1013003
+2020-02-05 19:47:40,281 [      6] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapCompareFirmwareVersion()
+2020-02-05 19:47:40,281 [      6] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapCompareFirmwareVersion = false
+2020-02-05 19:47:40,282 [      7] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapDisplay()
+2020-02-05 19:47:40,282 [      7] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapDisplay = false
+2020-02-05 19:47:40,282 [      7] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapDisplayText()
+2020-02-05 19:47:40,282 [      7] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapDisplayText = false
+2020-02-05 19:47:40,283 [      8] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapPowerReporting()
+2020-02-05 19:47:40,283 [      8] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapPowerReporting = JPOS_PR_NONE
+2020-02-05 19:47:40,284 [      9] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapPriceCalculating()
+2020-02-05 19:47:40,284 [      9] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapPriceCalculating = false
+2020-02-05 19:47:40,284 [      9] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapStatisticsReporting()
+2020-02-05 19:47:40,284 [      9] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapStatisticsReporting = false
+2020-02-05 19:47:40,284 [      9] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapStatusUpdate()
+2020-02-05 19:47:40,284 [      9] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapStatusUpdate = false
+2020-02-05 19:47:40,284 [      9] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapTareWeight()
+2020-02-05 19:47:40,285 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapTareWeight = true
+2020-02-05 19:47:40,285 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapUpdateFirmware()
+2020-02-05 19:47:40,285 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapUpdateFirmware = false
+2020-02-05 19:47:40,285 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapUpdateStatistics()
+2020-02-05 19:47:40,285 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapUpdateStatistics = false
+2020-02-05 19:47:40,285 [     10] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapZeroScale()
+2020-02-05 19:47:40,286 [     11] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - getCapZeroScale = true
+2020-02-05 19:47:40,286 [     11] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - claim(1000)
+2020-02-05 19:47:40,286 [     11] [main]  DEBUG - com.shtrih.scale.ScaleSerial - setParam(Таймаут_ТипУстройства: 1000)
+2020-02-05 19:47:40,287 [     12] [main]  DEBUG - com.shtrih.scale.ScaleSerial - createSerialPort()
+2020-02-05 19:47:40,287 [     12] [main]  DEBUG - com.shtrih.scale.ScaleSerial - openPort()
+2020-02-05 19:47:40,287 [     12] [main]  DEBUG - com.shtrih.port.TcpSocketPort - open(10.11.7.129:51234)
+2020-02-05 19:47:40,346 [     71] [main]  DEBUG - com.shtrih.port.TcpSocketPort - OK
+2020-02-05 19:47:40,346 [     71] [main]  DEBUG - com.shtrih.scale.ScaleSerial - openPort: OK
+2020-02-05 19:47:40,346 [     71] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - claim: OK
+2020-02-05 19:47:40,346 [     71] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - setDeviceEnabled(true)
+2020-02-05 19:47:40,346 [     71] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - setDeviceEnabled: OK
+2020-02-05 19:47:40,346 [     71] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - setAsyncMode(false)
+2020-02-05 19:47:40,347 [     72] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:40,347 [     72] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:40,349 [     74] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:40,349 [     74] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:40,353 [     78] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:40,489 [    214] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:40,489 [    214] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:40,766 [    491] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:40,766 [    491] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:40,766 [    491] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:40,766 [    491] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:40,766 [    491] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:40,767 [    492] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:40,768 [    493] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:40,768 [    493] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:40,772 [    497] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:40,772 [    497] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:40,772 [    497] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:40,772 [    497] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:40,772 [    497] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:40,891 [    616] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:40,891 [    616] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:40,988 [    713] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:40,988 [    713] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:40,988 [    713] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:40,988 [    713] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:40,988 [    713] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:40,988 [    713] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:40,989 [    714] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:40,989 [    714] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:40,989 [    714] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:40,989 [    714] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:40,989 [    714] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:40,990 [    715] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:40,990 [    715] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:41,086 [    811] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:41,086 [    811] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:41,187 [    912] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:41,187 [    912] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:41,187 [    912] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:41,187 [    912] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:41,187 [    912] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:41,187 [    912] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:41,187 [    912] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:41,188 [    913] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:41,188 [    913] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:41,188 [    913] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:41,189 [    914] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:41,189 [    914] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:41,189 [    914] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:41,299 [   1024] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:41,299 [   1024] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:41,486 [   1211] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:41,486 [   1211] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:41,486 [   1211] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:41,486 [   1211] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:41,486 [   1211] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:41,486 [   1211] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:41,486 [   1211] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:41,486 [   1211] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:41,487 [   1212] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:41,487 [   1212] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:41,487 [   1212] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:41,487 [   1212] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:41,487 [   1212] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:41,586 [   1311] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:41,587 [   1312] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:41,686 [   1411] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:41,686 [   1411] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:41,686 [   1411] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:41,686 [   1411] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:41,686 [   1411] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:41,687 [   1412] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:41,687 [   1412] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:41,687 [   1412] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:41,687 [   1412] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:41,687 [   1412] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:41,687 [   1412] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:41,687 [   1412] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:41,687 [   1412] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:41,787 [   1512] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:41,787 [   1512] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:41,896 [   1621] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:41,896 [   1621] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:41,896 [   1621] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:41,896 [   1621] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:41,896 [   1621] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:41,896 [   1621] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:41,897 [   1622] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:41,897 [   1622] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:41,903 [   1628] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:41,903 [   1628] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:41,903 [   1628] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:41,903 [   1628] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:41,903 [   1628] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:41,984 [   1709] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:41,984 [   1709] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:42,086 [   1811] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:42,087 [   1812] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:42,087 [   1812] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:42,087 [   1812] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:42,087 [   1812] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:42,087 [   1812] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:42,087 [   1812] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:42,087 [   1812] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:42,088 [   1813] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:42,088 [   1813] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:42,088 [   1813] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:42,088 [   1813] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:42,088 [   1813] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:42,199 [   1924] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:42,199 [   1924] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:42,288 [   2013] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:42,288 [   2013] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:42,288 [   2013] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:42,289 [   2014] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:42,289 [   2014] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:42,289 [   2014] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:42,289 [   2014] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:42,289 [   2014] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:42,289 [   2014] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:42,289 [   2014] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:42,289 [   2014] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:42,290 [   2015] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:42,290 [   2015] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:42,420 [   2145] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:42,420 [   2145] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:42,603 [   2328] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:42,603 [   2328] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:42,603 [   2328] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:42,603 [   2328] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:42,603 [   2328] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:42,603 [   2328] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:42,603 [   2328] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:42,604 [   2329] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:42,605 [   2330] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:42,605 [   2330] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:42,605 [   2330] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:42,605 [   2330] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:42,605 [   2330] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:42,693 [   2418] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:42,693 [   2418] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:42,817 [   2542] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:42,817 [   2542] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:42,817 [   2542] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:42,817 [   2542] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:42,817 [   2542] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:42,817 [   2542] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:42,817 [   2542] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:42,817 [   2542] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:42,829 [   2554] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:42,829 [   2554] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:42,829 [   2554] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:42,830 [   2555] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:42,830 [   2555] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:42,912 [   2637] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:42,912 [   2637] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:43,103 [   2828] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:43,103 [   2828] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:43,103 [   2828] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:43,103 [   2828] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:43,103 [   2828] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:43,103 [   2828] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:43,103 [   2828] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:43,103 [   2828] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:43,104 [   2829] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:43,104 [   2829] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:43,104 [   2829] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:43,104 [   2829] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:43,104 [   2829] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:43,215 [   2940] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:43,215 [   2940] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:43,408 [   3133] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:43,408 [   3133] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:43,408 [   3133] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:43,408 [   3133] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:43,408 [   3133] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:43,408 [   3133] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:43,408 [   3133] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:43,408 [   3133] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:43,409 [   3134] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:43,409 [   3134] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:43,410 [   3135] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:43,410 [   3135] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:43,410 [   3135] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:43,544 [   3269] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:43,544 [   3269] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:43,715 [   3440] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:43,715 [   3440] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:43,715 [   3440] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:43,715 [   3440] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:43,715 [   3440] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:43,715 [   3440] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:43,716 [   3441] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:43,716 [   3441] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:43,716 [   3441] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:43,716 [   3441] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:43,717 [   3442] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:43,717 [   3442] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:43,717 [   3442] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:43,827 [   3552] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:43,827 [   3552] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:44,022 [   3747] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:44,023 [   3748] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:44,023 [   3748] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:44,023 [   3748] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:44,023 [   3748] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:44,023 [   3748] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:44,023 [   3748] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:44,023 [   3748] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:44,024 [   3749] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:44,024 [   3749] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:44,024 [   3749] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:44,024 [   3749] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:44,024 [   3749] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:44,125 [   3850] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:44,125 [   3850] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:44,329 [   4054] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:44,330 [   4055] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:44,330 [   4055] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:44,330 [   4055] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:44,330 [   4055] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:44,330 [   4055] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:44,330 [   4055] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:44,330 [   4055] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:44,331 [   4056] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:44,331 [   4056] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:44,331 [   4056] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:44,331 [   4056] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:44,331 [   4056] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:44,536 [   4261] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:44,536 [   4261] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:44,739 [   4464] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:44,739 [   4464] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:44,739 [   4464] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:44,739 [   4464] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:44,739 [   4464] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:44,739 [   4464] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:44,739 [   4464] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:44,739 [   4464] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:44,739 [   4464] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:44,739 [   4464] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:44,739 [   4464] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:44,739 [   4464] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:44,739 [   4464] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:44,789 [   4514] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:44,789 [   4514] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:44,886 [   4611] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:44,886 [   4611] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:44,887 [   4612] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:44,887 [   4612] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:44,887 [   4612] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:44,887 [   4612] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:44,887 [   4612] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:44,887 [   4612] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:44,888 [   4613] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:44,888 [   4613] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:44,888 [   4613] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:44,888 [   4613] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:44,888 [   4613] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:45,148 [   4873] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:45,149 [   4874] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:45,354 [   5079] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:45,354 [   5079] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:45,354 [   5079] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:45,354 [   5079] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:45,354 [   5079] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:45,354 [   5079] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:45,354 [   5079] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:45,354 [   5079] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:45,355 [   5080] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:45,355 [   5080] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:45,355 [   5080] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:45,355 [   5080] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:45,355 [   5080] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:45,486 [   5211] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:45,486 [   5211] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:45,681 [   5406] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:45,681 [   5406] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:45,682 [   5407] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:45,682 [   5407] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:45,682 [   5407] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:45,682 [   5407] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:45,682 [   5407] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:45,682 [   5407] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:45,683 [   5408] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:45,683 [   5408] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:45,683 [   5408] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:45,683 [   5408] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:45,683 [   5408] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:45,787 [   5512] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:45,788 [   5513] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:45,886 [   5611] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:45,886 [   5611] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:45,886 [   5611] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:45,886 [   5611] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:45,886 [   5611] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:45,886 [   5611] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:45,886 [   5611] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:45,886 [   5611] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:45,887 [   5612] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:45,887 [   5612] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:45,887 [   5612] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:45,887 [   5612] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:45,887 [   5612] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:45,987 [   5712] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:45,987 [   5712] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:46,088 [   5813] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:46,088 [   5813] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:46,088 [   5813] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:46,088 [   5813] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:46,089 [   5814] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:46,089 [   5814] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:46,089 [   5814] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:46,089 [   5814] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:46,089 [   5814] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:46,089 [   5814] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:46,089 [   5814] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:46,089 [   5814] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:46,089 [   5814] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:46,187 [   5912] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:46,187 [   5912] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:46,290 [   6015] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:46,290 [   6015] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:46,290 [   6015] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:46,290 [   6015] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:46,290 [   6015] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:46,290 [   6015] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:46,290 [   6015] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:46,290 [   6015] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:46,291 [   6016] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:46,291 [   6016] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:46,291 [   6016] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:46,291 [   6016] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:46,291 [   6016] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:46,392 [   6117] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:46,392 [   6117] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:46,488 [   6213] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:46,488 [   6213] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:46,488 [   6213] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:46,488 [   6213] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:46,488 [   6213] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:46,488 [   6213] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:46,488 [   6213] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:46,488 [   6213] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:46,488 [   6213] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:46,488 [   6213] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:46,489 [   6214] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:46,489 [   6214] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:46,489 [   6214] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:46,590 [   6315] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:46,590 [   6315] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:46,686 [   6411] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:46,686 [   6411] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:46,686 [   6411] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:46,686 [   6411] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:46,686 [   6411] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:46,686 [   6411] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:46,686 [   6411] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:46,686 [   6411] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:46,687 [   6412] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:46,687 [   6412] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:46,687 [   6412] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:46,687 [   6412] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:46,687 [   6412] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:46,788 [   6513] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:46,789 [   6514] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:46,890 [   6615] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:46,890 [   6615] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:46,891 [   6616] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:46,891 [   6616] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:46,891 [   6616] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:46,891 [   6616] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:46,891 [   6616] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:46,891 [   6616] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:46,892 [   6617] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:46,892 [   6617] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:46,892 [   6617] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:46,892 [   6617] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:46,892 [   6617] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:46,993 [   6718] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:46,993 [   6718] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:47,096 [   6821] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:47,096 [   6821] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:47,096 [   6821] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:47,096 [   6821] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:47,096 [   6821] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:47,096 [   6821] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:47,096 [   6821] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:47,096 [   6821] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:47,097 [   6822] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:47,097 [   6822] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:47,097 [   6822] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:47,097 [   6822] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:47,097 [   6822] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:47,208 [   6933] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:47,208 [   6933] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:47,299 [   7024] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:47,299 [   7024] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:47,299 [   7024] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:47,299 [   7024] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:47,299 [   7024] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:47,299 [   7024] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:47,299 [   7024] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:47,299 [   7024] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:47,300 [   7025] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:47,300 [   7025] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:47,300 [   7025] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:47,300 [   7025] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:47,300 [   7025] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:47,401 [   7126] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:47,401 [   7126] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:47,520 [   7245] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:47,520 [   7245] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:47,520 [   7245] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:47,520 [   7245] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:47,520 [   7245] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:47,520 [   7245] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:47,520 [   7245] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:47,520 [   7245] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:47,521 [   7246] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:47,521 [   7246] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:47,521 [   7246] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:47,521 [   7246] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:47,521 [   7246] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:47,614 [   7339] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:47,614 [   7339] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:47,819 [   7544] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:47,819 [   7544] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:47,819 [   7544] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:47,819 [   7544] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:47,819 [   7544] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:47,819 [   7544] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:47,819 [   7544] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:47,819 [   7544] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:47,820 [   7545] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:47,820 [   7545] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:47,820 [   7545] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:47,820 [   7545] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:47,820 [   7545] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:47,920 [   7645] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:47,920 [   7645] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:48,133 [   7858] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:48,133 [   7858] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:48,133 [   7858] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:48,133 [   7858] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:48,133 [   7858] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:48,133 [   7858] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:48,133 [   7858] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:48,133 [   7858] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:48,134 [   7859] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:48,134 [   7859] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:48,134 [   7859] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:48,134 [   7859] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:48,134 [   7859] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:48,221 [   7946] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:48,222 [   7947] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:48,427 [   8152] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:48,427 [   8152] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:48,427 [   8152] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:48,427 [   8152] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:48,427 [   8152] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:48,427 [   8152] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:48,427 [   8152] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:48,427 [   8152] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:48,428 [   8153] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:48,428 [   8153] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:48,428 [   8153] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:48,428 [   8153] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:48,428 [   8153] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:48,535 [   8260] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:48,535 [   8260] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:48,744 [   8469] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:48,744 [   8469] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:48,744 [   8469] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:48,744 [   8469] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:48,744 [   8469] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:48,744 [   8469] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:48,744 [   8469] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:48,744 [   8469] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:48,745 [   8470] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:48,745 [   8470] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:48,745 [   8470] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:48,745 [   8470] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:48,745 [   8470] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:48,944 [   8669] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:48,944 [   8669] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:49,087 [   8812] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:49,087 [   8812] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:49,087 [   8812] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:49,087 [   8812] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:49,087 [   8812] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:49,087 [   8812] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:49,087 [   8812] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:49,087 [   8812] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:49,088 [   8813] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:49,088 [   8813] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:49,088 [   8813] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:49,088 [   8813] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:49,088 [   8813] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:49,187 [   8912] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:49,187 [   8912] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:49,290 [   9015] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:49,290 [   9015] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:49,290 [   9015] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:49,290 [   9015] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:49,291 [   9016] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:49,291 [   9016] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:49,291 [   9016] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:49,291 [   9016] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:49,291 [   9016] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:49,291 [   9016] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:49,291 [   9016] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:49,291 [   9016] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:49,291 [   9016] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:49,394 [   9119] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:49,394 [   9119] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:49,488 [   9213] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:49,488 [   9213] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:49,488 [   9213] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:49,488 [   9213] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:49,488 [   9213] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:49,488 [   9213] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:49,488 [   9213] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:49,488 [   9213] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:49,489 [   9214] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:49,489 [   9214] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:49,489 [   9214] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:49,489 [   9214] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:49,490 [   9215] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:49,699 [   9424] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:49,699 [   9424] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:49,787 [   9512] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:49,787 [   9512] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:49,787 [   9512] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:49,787 [   9512] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:49,787 [   9512] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:49,787 [   9512] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:49,787 [   9512] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:49,787 [   9512] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:49,788 [   9513] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:49,788 [   9513] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:49,788 [   9513] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:49,788 [   9513] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:49,788 [   9513] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:49,971 [   9696] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:49,971 [   9696] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:50,089 [   9814] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:50,089 [   9814] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:50,089 [   9814] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:50,089 [   9814] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:50,089 [   9814] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:50,089 [   9814] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:50,089 [   9814] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:50,090 [   9815] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:50,090 [   9815] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:50,090 [   9815] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:50,090 [   9815] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:50,090 [   9815] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:50,090 [   9815] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:50,190 [   9915] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:50,190 [   9915] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:50,288 [  10013] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:50,288 [  10013] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:50,288 [  10013] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:50,288 [  10013] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:50,288 [  10013] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:50,288 [  10013] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:50,288 [  10013] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:50,288 [  10013] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:50,288 [  10013] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:50,289 [  10014] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:50,289 [  10014] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:50,289 [  10014] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:50,289 [  10014] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:50,387 [  10112] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:50,388 [  10113] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:50,483 [  10208] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:50,483 [  10208] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:50,483 [  10208] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:50,483 [  10208] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:50,483 [  10208] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:50,483 [  10208] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:50,483 [  10208] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:50,483 [  10208] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:50,484 [  10209] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:50,484 [  10209] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:50,484 [  10209] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:50,484 [  10209] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:50,484 [  10209] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:50,585 [  10310] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:50,585 [  10310] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:50,688 [  10413] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:50,688 [  10413] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:50,688 [  10413] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:50,688 [  10413] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:50,688 [  10413] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:50,688 [  10413] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:50,688 [  10413] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:50,688 [  10413] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:50,688 [  10413] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:50,688 [  10413] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:50,689 [  10414] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:50,689 [  10414] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:50,689 [  10414] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:50,788 [  10513] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:50,788 [  10513] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:50,913 [  10638] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:50,913 [  10638] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:50,913 [  10638] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:50,913 [  10638] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:50,913 [  10638] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:50,913 [  10638] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:50,913 [  10638] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:50,913 [  10638] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:50,914 [  10639] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:50,914 [  10639] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:50,914 [  10639] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:50,914 [  10639] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:50,914 [  10639] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:50,993 [  10718] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:50,993 [  10718] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:51,098 [  10823] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:51,099 [  10824] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:51,099 [  10824] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:51,099 [  10824] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:51,099 [  10824] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:51,099 [  10824] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:51,099 [  10824] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:51,099 [  10824] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:51,100 [  10825] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:51,100 [  10825] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:51,100 [  10825] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:51,100 [  10825] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:51,100 [  10825] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:51,191 [  10916] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:51,191 [  10916] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:51,293 [  11018] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:51,294 [  11019] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:51,294 [  11019] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:51,294 [  11019] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:51,294 [  11019] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:51,294 [  11019] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:51,294 [  11019] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:51,294 [  11019] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:51,294 [  11019] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:51,294 [  11019] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:51,294 [  11019] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:51,294 [  11019] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:51,294 [  11019] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:51,396 [  11121] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:51,396 [  11121] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:51,498 [  11223] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:51,499 [  11224] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:51,499 [  11224] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:51,499 [  11224] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:51,499 [  11224] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:51,499 [  11224] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:51,499 [  11224] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:51,499 [  11224] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:51,499 [  11224] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:51,500 [  11225] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:51,500 [  11225] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:51,500 [  11225] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:51,500 [  11225] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:51,602 [  11327] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:51,602 [  11327] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:51,714 [  11439] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:51,714 [  11439] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:51,714 [  11439] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:51,714 [  11439] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:51,714 [  11439] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:51,714 [  11439] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:51,714 [  11439] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:51,714 [  11439] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:51,715 [  11440] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:51,715 [  11440] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:51,715 [  11440] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:51,715 [  11440] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:51,715 [  11440] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:51,805 [  11530] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:51,805 [  11530] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:51,908 [  11633] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:51,908 [  11633] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:51,908 [  11633] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:51,908 [  11633] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:51,908 [  11633] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:51,908 [  11633] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:51,908 [  11633] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:51,908 [  11633] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:51,908 [  11633] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:51,909 [  11634] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:51,909 [  11634] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:51,909 [  11634] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:51,909 [  11634] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:52,012 [  11737] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:52,012 [  11737] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C
+2020-02-05 19:47:52,220 [  11945] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 06
+2020-02-05 19:47:52,220 [  11945] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 02
+2020-02-05 19:47:52,220 [  11945] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 0B
+2020-02-05 19:47:52,220 [  11945] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 3A 00 15 00 08 06 00 00 00 00 00 2A
+2020-02-05 19:47:52,220 [  11945] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:52,220 [  11945] [main]  DEBUG - com.shtrih.scale.Pos2Serial - weight = 1544, tare = 0, flags = 21
+2020-02-05 19:47:52,220 [  11945] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - weight = 1544, tareWeight = 0
+2020-02-05 19:47:52,220 [  11945] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight: OK
+2020-02-05 19:47:52,221 [  11946] [main]  DEBUG - com.shtrih.jpos.scale.ScaleService - readWeight([I@12bb4df8, 1000)
+2020-02-05 19:47:52,221 [  11946] [main]  DEBUG - com.shtrih.scale.Pos2Serial - readWeight
+2020-02-05 19:47:52,221 [  11946] [main]  DEBUG - com.shtrih.scale.Pos2Serial - ------------------------------------------------------
+2020-02-05 19:47:52,221 [  11946] [main]  DEBUG - com.shtrih.scale.Pos2Serial - Запрос состояния весового канала
+2020-02-05 19:47:52,221 [  11946] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 05
+2020-02-05 19:47:52,338 [  12063] [main]  DEBUG - com.shtrih.port.TcpSocketPort - <- 15
+2020-02-05 19:47:52,339 [  12064] [main]  DEBUG - com.shtrih.port.TcpSocketPort - -> 02 05 3A 30 30 33 30 3C

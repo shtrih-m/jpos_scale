@@ -6,6 +6,8 @@ import javax.swing.JLabel;
 import java.awt.SystemColor;
 
 import com.shtrih.scale.CalibrationStatus;
+import com.shtrih.scale.Page;
+import com.shtrih.scale.SmScale;
 
 public class Page4 extends Page {
 

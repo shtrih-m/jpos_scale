@@ -28,6 +28,10 @@ import javax.swing.border.Border;
 import org.eclipse.wb.swing.FocusTraversalOnArray;
 
 import com.shtrih.port.GnuSerialPort;
+import com.shtrih.scale.FindDlg;
+import com.shtrih.scale.Page;
+import com.shtrih.scale.SmScale;
+
 import javax.swing.JOptionPane;
 
 public class Page1 extends Page {

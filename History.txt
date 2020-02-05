@@ -8,8 +8,19 @@
 ********************************************************************************
 
   January, 20 2020 13:40
-  deviceServiceVersion = 1013003
+  deviceServiceVersion = 1013001
 
   [+] First version
+
+********************************************************************************
+
+  February, 5 2020 19:15
+  deviceServiceVersion = 1013003
+
+  [-] Added TCP protocol support. Added parameter portType in  jpos.xml:
+      <!-- Port type: 0- serial, 1- TCP -->
+      <prop name="portType" type="String" value="0"/>
+	  For TCP connection portName parameter has format "IP address:Port"
+      <prop name="portName" type="String" value="10.11.7.129:51234"/>
 
 ********************************************************************************

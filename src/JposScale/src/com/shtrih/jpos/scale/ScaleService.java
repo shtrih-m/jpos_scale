@@ -556,7 +556,7 @@ public class ScaleService extends Scale implements ScaleService113, ScaleConst, 
 
     public int getDeviceServiceVersion() throws JposException {
         // 001 | 000 | 000
-        int version = 1013001;
+        int version = 1013003;
         logger.debug("getDeviceServiceVersion()");
         logger.debug("getDeviceServiceVersion = " + version);
         return version;
@@ -766,24 +766,8 @@ public class ScaleService extends Scale implements ScaleService113, ScaleConst, 
 
     private JposException getJposException(Exception e) {
         logger.error(e);
-        if (e instanceof java.io.IOException) {
-            return new JposException(JposConst.JPOS_E_TIMEOUT, e.getMessage());
-        }
-
         if (e instanceof DeviceError) {
             return new JposException(JposConst.JPOS_E_FAILURE, e.getMessage());
-        }
-
-        if (e instanceof gnu.io.NoSuchPortException) {
-            return new JposException(JposConst.JPOS_E_FAILURE, GnuSerialPort.TEXT_ERROR_NOTSUCHPORT);
-        }
-
-        if (e instanceof gnu.io.PortInUseException) {
-            return new JposException(JposConst.JPOS_E_FAILURE, GnuSerialPort.TEXT_ERROR_INUSE);
-        }
-
-        if (e instanceof gnu.io.UnsupportedCommOperationException) {
-            return new JposException(JposConst.JPOS_E_FAILURE, GnuSerialPort.TEXT_ERROR_UNSUPPORT);
         }
         return new JposException(JposConst.JPOS_E_FAILURE, e.getMessage());
     }

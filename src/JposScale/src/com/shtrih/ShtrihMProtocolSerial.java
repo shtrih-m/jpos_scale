@@ -5,6 +5,7 @@ import com.shtrih.DeviceError;
 import com.shtrih.scale.ScaleCommand;
 import com.shtrih.scale.ScaleSerial;
 import com.shtrih.port.SerialPort;
+import com.shtrih.tools.Logger2;
 import org.apache.log4j.Logger;
 
 /* 
@@ -30,7 +31,8 @@ public class ShtrihMProtocolSerial {
         byteTimeout = value;
     }
 
-    public ScaleCommand execCommand(ScaleCommand cmd) throws Exception {
+	public ScaleCommand execCommand(ScaleCommand cmd) throws Exception 
+    {
         serialPort.open();
         // Пересчитаем контрольную сумму
         cmd.crc = cmd.getCRC();
@@ -122,13 +124,16 @@ public class ShtrihMProtocolSerial {
             serialPort.setTimeout(byteTimeout);
             // Длина
             len = serialPort.readByte();
-            // Код команды
-            cmd = serialPort.readByte();
             // Данные
-            byte data[] = serialPort.readBytes(len - 1);
+            byte data[] = serialPort.readBytes(len + 1);
+            // Код команды
+            cmd = data[0];
             // LRC
-            lrc = serialPort.readByte();
+            lrc = data[len];
+            
             command = new ScaleCommand((byte) cmd, 1000);
+            System.arraycopy(data, 1, data, 0, len);
+            
             command.setData(data);
             command.crc = (byte) lrc;
             break;

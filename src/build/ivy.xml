@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ivy-module version="2.0" xmlns:m="http://ant.apache.org/ivy/maven">
-  <info organisation="" module="shtrih_jpos_scale" revision="" status="integration" default="true" publication="20200121155939"/>
+  <info organisation="" module="shtrih_jpos_scale" revision="" status="integration" default="true" publication="20200205191940"/>
   <configurations>
     <conf name="archives" visibility="public"/>
     <conf name="compile" visibility="private"/>

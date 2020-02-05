@@ -1,5 +1,6 @@
 package com.shtrih.port;
 
+import com.shtrih.tools.Logger2;
 import java.io.*;
 import java.net.*;
 import java.util.*;
@@ -57,14 +58,7 @@ public class TcpSocketPort implements SerialPort {
     }
 
     public int readByte() throws Exception {
-        open();
-
-        int b = socket.getInputStream().read();
-        if (b == -1) {
-            noConnectionError();
-        }
-
-        return b;
+        return readBytes(1)[0];
     }
 
     private void noConnectionError() throws Exception {
@@ -84,11 +78,13 @@ public class TcpSocketPort implements SerialPort {
             len -= count;
             offset += count;
         }
+        Logger2.logRx(logger, data);
         return data;
     }
 
     public void write(byte[] b) throws Exception 
     {
+        Logger2.logTx(logger, b);
         OutputStream os = socket.getOutputStream();
         for (int i = 0; i < 2; i++) {
             try {
@@ -106,7 +102,6 @@ public class TcpSocketPort implements SerialPort {
     }
 
     public void write(int b) throws Exception {
-        open();
         byte[] data = new byte[1];
         data[0] = (byte) b;
         write(data);

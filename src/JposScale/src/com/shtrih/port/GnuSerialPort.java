@@ -32,26 +32,7 @@ public class GnuSerialPort implements SerialPort {
     public long idleTimeoutMS = 0;
     public int idleTimeoutNS = 1;
     private int readTimeout = 1000;
-            
-    public static final int ERROR_NONE = 0;
-    public static final int ERROR_UNKNOWN = -1;
-    public static final int ERROR_PORTINUSE = -2;
-    public static final int ERROR_NOSUCHPORT = -3;
-    public static final int ERROR_IO = -4;
-    public static final int ERROR_UNSUPPORT = -5;
-    public static final int ERROR_TIMEOUT = -7;
 
-    public static final String TEXT_ERROR_NONE = "Ошибок нет";
-    public static final String TEXT_ERROR_UNKNOWN = "Неизвестная ошибка";
-    //public static final String TEXT_ERROR_INUSE = "Порт открыт приложением, ";
-    public static final String TEXT_ERROR_INUSE = "Port is opened by another application";
-    //public static final String TEXT_ERROR_NOTSUCHPORT = "Порт не существует";
-    public static final String TEXT_ERROR_NOTSUCHPORT = "Port is not exists";
-    public static final String TEXT_ERROR_IO = "Ошибка ввода/вывода";
-    public static final String TEXT_ERROR_UNSUPPORT = "Не поддерживается";
-    public static final String TEXT_ERROR_TIMEOUT = "Нет связи";
-    public static final String TEXT_ERROR_PORTINUSE = "Невозможно открыть порт.";
-    
     public GnuSerialPort() {
     }
 
@@ -100,8 +81,7 @@ public class GnuSerialPort implements SerialPort {
         port.enableReceiveTimeout(openTimeout);
     }
 
-    public void setTimeout(int timeout) throws Exception 
-    {
+    public void setTimeout(int timeout) throws Exception {
         port.enableReceiveTimeout(timeout);
         readTimeout = timeout;
     }
@@ -131,7 +111,7 @@ public class GnuSerialPort implements SerialPort {
         }
     }
 
-    public int readByte() throws Exception {
+    public int doReadByte() throws Exception {
         open();
 
         int result;
@@ -161,40 +141,35 @@ public class GnuSerialPort implements SerialPort {
         }
     }
 
-    public void read(GnuSerialPort.Buffer out, int expectedBytes, int timeout) throws Exception {
+    public int readByte() throws Exception {
+        byte[] data = new byte[1];
+        data[0] = (byte) doReadByte();
+        Logger2.logRx(logger, data);
+        return data[0];
+    }
+
+    public void read(GnuSerialPort.Buffer out, int len, int timeout) throws Exception {
         if (timeout < 100) {
             timeout = 100;
         }
-        if (expectedBytes <= 0) {
-            return;
-        }
         setTimeout(timeout);
-        out.data = new byte[expectedBytes];
-        for (int i = 0; i < expectedBytes; i++) {
-            int b = readByte();
-            out.data[i] = (byte) b;
-            Tools.sleep(idleTimeoutMS, idleTimeoutNS);
-        }
-
-        Logger2.logRx(logger, out.data);
+        out.data = readBytes(len);
     }
 
     public void read(GnuSerialPort.Buffer out, int timeout) throws Exception {
         read(out, -1, timeout);
     }
 
-    public byte[] readBytes(int len) throws Exception
-    {
+    public byte[] readBytes(int len) throws Exception {
         byte[] result = new byte[len];
-        for (int i = 0; i < len; i++) 
-        {
-            int b = readByte();
+        for (int i = 0; i < len; i++) {
+            int b = doReadByte();
             result[i] = (byte) b;
         }
         Logger2.logRx(logger, result);
         return result;
     }
-    
+
     public void write(ByteBuffer in) throws Exception {
         write(in.array());
     }
@@ -224,7 +199,7 @@ public class GnuSerialPort implements SerialPort {
     }
 
     public void writeByte(int b, boolean flush) throws Exception {
-        write(new GnuSerialPort.Buffer(new byte[]{(byte)b}), flush);
+        write(new GnuSerialPort.Buffer(new byte[]{(byte) b}), flush);
     }
 
     public void write(int b) throws Exception {
@@ -298,15 +273,15 @@ public class GnuSerialPort implements SerialPort {
         return names;
     }
 
-    public String[] getPortNames() {
-        Vector result = new Vector();
+    public static Vector<String> getPortList2() {
+        Vector<String> names = new Vector<String>();
         Enumeration e = gnu.io.CommPortIdentifier.getPortIdentifiers();
         while (e.hasMoreElements()) {
             gnu.io.CommPortIdentifier port = (gnu.io.CommPortIdentifier) e.nextElement();
             if (port.getPortType() == gnu.io.CommPortIdentifier.PORT_SERIAL) {
-                result.add(port.getName());
+                names.add(port.getName());
             }
         }
-        return (String[]) result.toArray(new String[0]);
+        return names;
     }
 }

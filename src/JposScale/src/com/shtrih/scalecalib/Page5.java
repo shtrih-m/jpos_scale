@@ -10,6 +10,9 @@ import javax.swing.ImageIcon;
 import java.net.URL;
 
 import com.shtrih.scale.CalibrationStatus;
+import com.shtrih.scale.Page;
+import com.shtrih.scale.SmScale;
+
 import javax.swing.JProgressBar;
 
 public class Page5 extends Page {

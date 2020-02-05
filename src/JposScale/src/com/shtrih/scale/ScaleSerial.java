@@ -18,23 +18,6 @@ public class ScaleSerial implements IScale, IDevice {
 
     public String getErrorText(int error) {
         switch (error) {
-            case IDevice.ERROR_OK:
-                return IDevice.TEXT_ERROR_OK;
-            case IDevice.ERROR_PARAMS:
-                return IDevice.TEXT_ERROR_PARAMS;
-            case IDevice.ERROR_NOLINK:
-                return IDevice.TEXT_ERROR_NOLINK;
-            case IDevice.ERROR_UNKNOWN:
-                return IDevice.TEXT_ERROR_UNKNOWN;
-            case IDevice.ERROR_BUSY:
-                return IDevice.TEXT_ERROR_BUSY;
-            case IDevice.ERROR_LL:
-                return IDevice.TEXT_ERROR_LL;
-            case IDevice.ERROR_UNSUPPORT:
-                return IDevice.TEXT_ERROR_UNSUPPORT;
-            case IDevice.ERROR_PASSWORD:
-                return IDevice.TEXT_ERROR_PASSWORD;
-
             case 17:
                 return IScale.ERROR_TEXT_TARA_VALUE;
             case 120:
