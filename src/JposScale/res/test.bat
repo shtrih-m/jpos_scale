@@ -5,7 +5,7 @@ set classpath=%classpath%;jpos113.jar
 set classpath=%classpath%;log4j-1.2.15.jar
 set classpath=%classpath%;RXTXcomm.jar
 set classpath=%classpath%;xerces.jar
-set classpath=%classpath%;SmScale.jar
+set classpath=%classpath%;smscale.jar
 set classpath=%classpath%;%cd%\
 
 REM %lp% is the library path used when loading

@@ -19,6 +19,7 @@ import com.shtrih.scale.Shtrih6Serial;
 import com.shtrih.tools.Tools;
 import com.shtrih.tools.StringParams;
 import com.shtrih.jpos.JposUtils;
+import com.shtrih.util.ServiceVersionUtil;
 
 import jpos.JposConst;
 import static jpos.JposConst.JPOS_EL_INPUT;
@@ -556,7 +557,7 @@ public class ScaleService extends Scale implements ScaleService113, ScaleConst, 
 
     public int getDeviceServiceVersion() throws JposException {
         // 001 | 000 | 000
-        int version = 1013003;
+        int version = 1013000 + ServiceVersionUtil.getVersionInt();
         logger.debug("getDeviceServiceVersion()");
         logger.debug("getDeviceServiceVersion = " + version);
         return version;
